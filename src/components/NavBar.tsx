@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
 	return (
 		<nav className="fixed top-0 left-0 z-10 w-full h-20 bg-[#00000099] backdrop-blur">
 			<div className="mx-auto py-2 flex justify-between items-center">
-				<a href="/" className="mx-2 flex items-center">
+				<a href="./" className="mx-2 flex items-center">
 					<img src={Logo} alt="Logo" className="h-14 w-14 mr-2" />
 					<span className="text-white text-3xl font-semibold">ECAST</span>
 				</a>
