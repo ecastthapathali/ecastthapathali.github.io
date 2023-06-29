@@ -35,13 +35,13 @@ const NavBar: React.FC = () => {
 							<path
 								fillRule="evenodd"
 								clipRule="evenodd"
-								d="M5 5h21v2H4V6zm0 5h6v2H4v2zm0 5h21v2H4v-2zm0"
+								d="M5 5h21v2H4V6zm0 5h6v2H4v2zm0 5h21v2H4v-2z"
 							/>
 						) : (
 							<path
 								fillRule="evenodd"
 								clipRule="evenodd"
-								d="M5 5h15v2H4V6zm0 5h15v2H4v2zm0 5h15v2H4v-2zm0"
+								d="M5 5h15v2H4V6zm0 5h15v2H4v2zm0 5h15v2H4v-2z"
 							/>
 						)}
 					</svg>
