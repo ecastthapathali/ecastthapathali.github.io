@@ -1,14 +1,20 @@
-import NavBar from "./components/NavBar"
-import Background from './assets/background.jpg'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
-
-  return (
-    <>
-      <NavBar/>
-      <img src={Background} className="brightness-75"></img>
-    </>
-  )
+	return (
+		<>
+			<BrowserRouter basename="/ECAST-Web-Frontend">
+				<NavBar />
+				<Routes>
+					<Route path="/" Component={Home} />
+					<Route path="/about" Component={About} />
+				</Routes>
+			</BrowserRouter>
+		</>
+	);
 }
 
-export default App
+export default App;
