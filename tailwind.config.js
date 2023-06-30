@@ -9,6 +9,9 @@ export default {
   },
   theme: {
     extend: {
+      colors: {
+        'theme': '#dbb732',
+      },
       brightness: {
         15: '.15',
       },
