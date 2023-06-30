@@ -6,7 +6,7 @@ import About from "./components/About";
 function App() {
 	return (
 		<>
-			<BrowserRouter>
+			<BrowserRouter basename="/ECAST-Web-Frontend">
 				<NavBar />
 				<Routes>
 					<Route path="/" Component={Home} />
