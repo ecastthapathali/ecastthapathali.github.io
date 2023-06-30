@@ -22,7 +22,7 @@ const NavBar: React.FC = () => {
 					<NavLink to="/gallery">Gallery</NavLink>
 				</div>
 				<button
-					className="sm:hidden px-2 m-2 text-[#fff] hover:text-[#dbb732] transition-color duration-500"
+					className="sm:hidden px-2 m-2 text-white hover:text-theme transition-color duration-500"
 					onClick={handleMenuToggle}
 				>
 					<svg
@@ -70,7 +70,7 @@ const NavLink: React.FC<NavLinkProps> = ({ to, children }) => {
 	return (
 		<a
 			href={baseurl + to}
-			className="text-[#fff] opacity-00 hover:opacity-100 font-bold my-3 px-3 py-2 hover:text-[#dbb732] hover:underline underline-offset-8 transition duration-500"
+			className="text-white opacity-90 hover:opacity-100 font-bold my-2 px-3 py-2 hover:text-theme hover:underline underline-offset-8 transition duration-500"
 		>
 			{children}
 		</a>
