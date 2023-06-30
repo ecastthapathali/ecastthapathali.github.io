@@ -9,7 +9,7 @@ const NavBar: React.FC = () => {
 	};
 
 	return (
-		<nav className="fixed top-0 left-0 z-10 w-full h-20 bg-[#00000099] backdrop-blur">
+		<nav className="fixed top-0 left-0 z-50 w-full h-20 bg-[#00000099] backdrop-blur">
 			<div className="mx-auto py-2 flex justify-between items-center">
 				<a href="./" className="mx-2 flex items-center">
 					<img src={Logo} alt="Logo" className="h-14 w-14 mr-2" />
@@ -47,7 +47,7 @@ const NavBar: React.FC = () => {
 					</svg>
 				</button>
 				{isMenuOpen && (
-					<div className="sm:hidden fixed top-20 text-center bg-[#00000099] w-full min-h-screen p-4 flex py-48 justify-evenly flex-col">
+					<div className="sm:hidden fixed top-20 text-center backdrop-blur bg-[#000000dd] w-full min-h-screen p-4 flex py-48 justify-evenly flex-col">
 						<NavLink to="/about">About Us</NavLink>
 						<NavLink to="/committee">Committee</NavLink>
 						<NavLink to="/projects">Projects</NavLink>
@@ -70,7 +70,7 @@ const NavLink: React.FC<NavLinkProps> = ({ to, children }) => {
 	return (
 		<a
 			href={baseurl + to}
-			className="text-[#fff] font-bold my-3 px-3 py-2 hover:text-[#dbb732] hover:underline underline-offset-8 transition duration-500"
+			className="text-[#fff] opacity-00 hover:opacity-100 font-bold my-3 px-3 py-2 hover:text-[#dbb732] hover:underline underline-offset-8 transition duration-500"
 		>
 			{children}
 		</a>
