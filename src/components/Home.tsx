@@ -10,8 +10,8 @@ const Home = () => {
 			<h2 className="lg:text-xl text-center lg:text-left font-mono" >" Electronics and Computer Community Amidst Students , Thapathali "</h2>
 			<h2 className="lg:text-xl text-center lg:text-left bg-white text-black p-2 rounded shadow-all shadow-white tracking-wide font-mono" >Thapathali's Student Club : Elevating Students' Skillsets</h2>
 			<div className="sm:flex-row flex flex-col lg:w-[50%] w-[100%] justify-around">
-				<button className="px-6 m-4 py-4 bg-white text-black font-bold rounded hover:bg-[#dbb732] hover:text-white transition duration-300">Our Events</button>
-				<button className="px-6 m-4 py-4 bg-transparent text-white hover:text-black hover:bg-white transition duration-500 border-2 border-white font-bold rounded">Join Our Discord</button>
+				<button className="px-6 m-4 py-4 bg-white text-black font-bold rounded hover:bg-theme hover:text-white transition duration-300">Our Events</button>
+				<button className="px-6 m-4 py-4 bg-transparent text-white hover:text-theme hover:bg-white transition duration-500 border-2 border-white font-bold rounded">Join Our Discord</button>
 			</div>
 		</div>
   	</main>
