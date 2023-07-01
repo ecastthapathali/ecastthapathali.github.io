@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full h-20 bg-[#00000099] backdrop-blur">
+    <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-[#00000099] backdrop-blur backdrop-brightness-50">
       <div className="mx-auto py-2 flex justify-between items-center">
         <NavLink to="./" className="mx-2 flex items-center">
           <img src={Logo} alt="Logo" className="h-14 w-14 mr-2" />
@@ -63,6 +63,7 @@ const NavBar: React.FC = () => {
 interface NavLinkProps {
   to: string;
   children: React.ReactNode;
+  isActive?: boolean;
 }
 
 const Navlink: React.FC<NavLinkProps> = ({ to, children }) => {
@@ -71,7 +72,11 @@ const Navlink: React.FC<NavLinkProps> = ({ to, children }) => {
   return (
     <NavLink
       to={baseurl + to}
-      className="text-white opacity-90 hover:opacity-100 font-bold my-2 px-3 py-2 hover:text-theme hover:underline underline-offset-8 transition duration-500"
+      className={({ isActive }) =>
+        isActive
+          ? "text-white opacity-90 hover:opacity-100 font-bold my-2 px-3 py-2 hover:text-theme transition duration-500 border border-solid rounded-3xl"
+          : "text-white opacity-90 hover:opacity-100 font-bold my-2 px-3 py-2 hover:text-theme hover:underline underline-offset-8 transition duration-500"
+      }
     >
       {children}
     </NavLink>
