@@ -10,20 +10,24 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-[#00000099] backdrop-blur backdrop-brightness-50">
-      <div className="mx-auto py-2 flex justify-between items-center">
-        <NavLink to="./" className="mx-2 flex items-center">
-          <img src={Logo} alt="Logo" className="h-14 w-14 mr-2" />
-          <span className="text-white text-3xl font-semibold">ECAST</span>
-        </NavLink>
-        <div className="hidden sm:flex items-center space-x-4 mx-4">
-          <Navlink to="/about">About Us</Navlink>
+    <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-[#2f3231] backdrop-blur shadow-2xl flex">
+      <div className="flex w-[95%] items-center justify-between m-auto">
+        <div className="flex items-center">
+          <NavLink to="./" className=" flex items-center gap-2">
+            <img src={Logo} alt="Logo" className="h-14 w-14" />
+            <span className="text-white text-3xl font-semibold tracking-wider">
+              ECAST
+            </span>
+          </NavLink>
+        </div>
+        <div className="hidden sm:flex items-center gap-8">
+          <Navlink to="/about">About</Navlink>
           <Navlink to="/committee">Committee</Navlink>
           <Navlink to="/projects">Projects</Navlink>
           <Navlink to="/gallery">Gallery</Navlink>
         </div>
         <button
-          className="sm:hidden px-2 m-2 text-white hover:text-theme transition-color duration-500"
+          className="sm:hidden text-white hover:text-theme transition-color duration-500"
           onClick={handleMenuToggle}
         >
           <svg
@@ -74,8 +78,8 @@ const Navlink: React.FC<NavLinkProps> = ({ to, children }) => {
       to={baseurl + to}
       className={({ isActive }) =>
         isActive
-          ? "text-white opacity-90 hover:opacity-100 font-bold my-2 px-3 py-2 hover:text-theme transition duration-500 border border-solid rounded-3xl"
-          : "text-white opacity-90 hover:opacity-100 font-bold my-2 px-3 py-2 hover:text-theme hover:underline underline-offset-8 transition duration-500"
+          ? "text-white text-s opacity-90 hover:opacity-100 px-2 py-3 font-bold transition duration-500 border-2 border-yellow-500 border-solid rounded-3xl uppercase tracking-widest"
+          : "text-white text-s opacity-90 hover:opacity-100 font-bold hover:text-theme underline-offset-8 transition duration-500 uppercase tracking-widest"
       }
     >
       {children}
