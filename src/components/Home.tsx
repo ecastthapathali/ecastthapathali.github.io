@@ -3,7 +3,7 @@
 const Home = () => {
   return (
     <main
-      className="flex h-[90vh]
+      className="flex h-[100vh]
     bg-[url('/src/assets/background.jpg')]
     bg-no-repeat
     bg-cover  "
