@@ -26,7 +26,7 @@ const NavBar: React.FC = () => {
           <Navlink to="/projects">Projects</Navlink>
           <Navlink to="/gallery">Gallery</Navlink>
         </div>
-        <button
+        <div
           className="sm:hidden text-white hover:text-theme transition-color duration-500"
           onClick={handleMenuToggle}
         >
@@ -50,7 +50,7 @@ const NavBar: React.FC = () => {
               />
             )}
           </svg>
-        </button>
+        </div>
         {isMenuOpen && (
           <div className="sm:hidden fixed top-20 text-center backdrop-blur bg-[#000000dd] w-full min-h-screen p-4 flex py-48 justify-evenly flex-col">
             <Navlink to="/about">About Us</Navlink>
@@ -64,23 +64,30 @@ const NavBar: React.FC = () => {
   );
 };
 
-interface NavLinkProps {
+interface NavlinkProps {
   to: string;
   children: React.ReactNode;
-  isActive?: boolean;
 }
 
-const Navlink: React.FC<NavLinkProps> = ({ to, children }) => {
+const Navlink: React.FC<NavlinkProps> = ({ to, children }) => {
   const baseurl = ".";
+
+  function useClassName({ isActive }: { isActive: boolean }) {
+    let baseClasses =
+      "text-white text-s opacity-90 hover:opacity-100 font-bold uppercase tracking-widest transition duration-500 ";
+    if (isActive) {
+      baseClasses +=
+        "px-2 py-3 border-2 border-yellow-500 border-solid rounded-3xl";
+    } else {
+      baseClasses += "hover:text-theme";
+    }
+    return baseClasses;
+  }
 
   return (
     <NavLink
       to={baseurl + to}
-      className={({ isActive }) =>
-        isActive
-          ? "text-white text-s opacity-90 hover:opacity-100 px-2 py-3 font-bold transition duration-500 border-2 border-yellow-500 border-solid rounded-3xl uppercase tracking-widest"
-          : "text-white text-s opacity-90 hover:opacity-100 font-bold hover:text-theme underline-offset-8 transition duration-500 uppercase tracking-widest"
-      }
+      className={({ isActive }) => useClassName({ isActive })}
     >
       {children}
     </NavLink>

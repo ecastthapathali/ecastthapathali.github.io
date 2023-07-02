@@ -1,12 +1,10 @@
-// import Background from "../assets/background.jpg";
+import Background from "../assets/background.jpg";
 
 const Home = () => {
   return (
     <main
-      className="flex h-[100vh]
-    bg-[url('/src/assets/background.jpg')]
-    bg-no-repeat
-    bg-cover  "
+      className={`flex h-[100vh] bg-no-repeat bg-cover`}
+      style={{ backgroundImage: `url(${Background})` }}
     >
       {/* Home Hero Section */}
       <div className="static p-8 text-white flex flex-col w-[100%] h-[100%] justify-evenly items-center z-10 backdrop-blur-sm backdrop-brightness-50">
@@ -14,7 +12,7 @@ const Home = () => {
           ECAST
         </h1>
         <h2 className="lg:text-xl text-center lg:text-left font-mono">
-          " Electronics and Computer Community Amidst Students , Thapathali "
+          " Electronics and Computer Community Amidst Students, Thapathali "
         </h2>
         <h2 className="lg:text-xl text-center lg:text-left bg-white text-black p-2 rounded shadow-all shadow-white tracking-wide font-mono">
           Thapathali's Student Club : Elevating Students' Skillsets
