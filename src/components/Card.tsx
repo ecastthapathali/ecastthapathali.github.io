@@ -4,7 +4,7 @@ const Card = ({imgSrc,name,pos}:{imgSrc:string, name:string, pos:string}) => {
             <img className="w-full rounded-full" src={imgSrc} alt="Team Member" />
             <h1 className="text-3xl my-4 text-theme">{name}</h1>
             <h1 className="text-xl my-4">{pos}</h1>
-            {/* If Socials then below... */}
+            {/* If Socials then add below... */}
         </div>
     )
   };
