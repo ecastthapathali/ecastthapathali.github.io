@@ -11,8 +11,8 @@ const NavBar: React.FC = () => {
 
   return (
     <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-[#2f3231] backdrop-blur shadow-2xl flex">
-      <div className="flex w-[95%] items-center justify-between m-auto">
-        <div className="flex items-center">
+      <div className="flex w-[100%] items-center justify-between m-auto">
+        <div className="flex px-4 items-center">
           <NavLink to="./" className=" flex items-center gap-2">
             <img src={Logo} alt="Logo" className="h-14 w-14" />
             <span className="text-white text-3xl font-semibold tracking-wider">
@@ -20,14 +20,14 @@ const NavBar: React.FC = () => {
             </span>
           </NavLink>
         </div>
-        <div className="hidden sm:flex items-center gap-8">
+        <div className="hidden mx-4 sm:flex items-center gap-8">
           <Navlink to="/about">About</Navlink>
           <Navlink to="/committee">Committee</Navlink>
           <Navlink to="/projects">Projects</Navlink>
           <Navlink to="/gallery">Gallery</Navlink>
         </div>
         <div
-          className="sm:hidden text-white hover:text-theme transition-color duration-500"
+          className="sm:hidden text-white hover:text-theme mx-4 transition-color duration-500"
           onClick={handleMenuToggle}
         >
           <svg
@@ -74,12 +74,12 @@ const Navlink: React.FC<NavlinkProps> = ({ to, children }) => {
 
   function useClassName({ isActive }: { isActive: boolean }) {
     let baseClasses =
-      "text-white text-s opacity-90 hover:opacity-100 font-bold uppercase tracking-widest transition duration-500 ";
+      "text-white text-s opacity-80 hover:opacity-100 font-bold uppercase tracking-wide  underline-offset-8 transition duration-500 ";
     if (isActive) {
       baseClasses +=
-        "px-2 py-3 border-2 border-yellow-500 border-solid rounded-3xl";
+        "text-theme underline";
     } else {
-      baseClasses += "hover:text-theme";
+      baseClasses += "hover:text-theme hover:underline";
     }
     return baseClasses;
   }
