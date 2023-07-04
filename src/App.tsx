@@ -13,7 +13,6 @@ function App() {
           <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
           <Route path="/committee" Component={Committee} />
-
         </Routes>
       </BrowserRouter>
     </>
