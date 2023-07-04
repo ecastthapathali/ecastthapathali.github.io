@@ -74,12 +74,12 @@ const Navlink: React.FC<NavlinkProps> = ({ to, children }) => {
 
   function useClassName({ isActive }: { isActive: boolean }) {
     let baseClasses =
-      "text-white text-s opacity-80 hover:opacity-100 font-bold uppercase tracking-wide  underline-offset-8 transition duration-500 ";
+      "p-2 opacity-90 hover:opacity-100 font-bold uppercase tracking-wide underline-offset-8 transition duration-500 ";
     if (isActive) {
       baseClasses +=
         "text-theme underline";
     } else {
-      baseClasses += "hover:text-theme hover:underline";
+      baseClasses += "text-white hover:text-theme hover:underline";
     }
     return baseClasses;
   }
