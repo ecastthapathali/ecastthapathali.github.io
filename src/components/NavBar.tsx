@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
             </span>
           </NavLink>
         </div>
-        <div className="hidden mx-4 sm:flex items-center gap-8">
+        <div className="hidden mx-4 sm:flex items-center gap-4">
           <Navlink to="/about">About</Navlink>
           <Navlink to="/committee">Committee</Navlink>
           <Navlink to="/projects">Projects</Navlink>
