@@ -5,11 +5,6 @@ import About from "./components/About";
 import Committee from "./components/Committee";
 
 function App() {
-  const TeamMemberList = [
-    { name: "Saugat Poudel", position: "President", imgSrc: "" },
-    { name: "Saugat Poudel", position: "President", imgSrc: "" },
-  ];
-
   return (
     <>
       <BrowserRouter basename="/ECAST-Web-Frontend">
