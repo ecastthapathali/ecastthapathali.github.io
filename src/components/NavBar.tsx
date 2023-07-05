@@ -76,8 +76,7 @@ const Navlink: React.FC<NavlinkProps> = ({ to, children }) => {
     let baseClasses =
       "p-2 opacity-90 hover:opacity-100 font-bold uppercase tracking-wide underline-offset-8 transition duration-500 ";
     if (isActive) {
-      baseClasses +=
-        "text-theme underline";
+      baseClasses += "text-theme underline";
     } else {
       baseClasses += "text-white hover:text-theme hover:underline";
     }
