@@ -1,4 +1,4 @@
-import Background from "../assets/background.jpg";
+import Background from "../assets/Thapathali.jpg";
 
 const Home = () => {
   return (
