@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Committee from "./components/Committee";
+import Highlight from "./components/Highlight";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/committee" Component={Committee} />
         </Routes>
       </BrowserRouter>
+      <Highlight/>
+      <Footer/>
     </>
   );
 }
