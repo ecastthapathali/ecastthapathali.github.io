@@ -11,6 +11,7 @@ export default {
         "theme-lqa": "#dbb73244",
         "theme-ha": "#dbb73288",
         "theme-hqa": "#dbb732bb",
+        crimson: '#DC143C',
       },
       brightness: {
         15: ".15",
@@ -23,6 +24,7 @@ export default {
       },
       boxShadow: {
         all: "0px 0px 15px 2px rgba(1,1,1, 0.3)",
+        custom: '7px 7px 17px #120f0f, -7px -7px 17px #151414',
       },
       fontSize: {
         "9xl": ["9rem"],
