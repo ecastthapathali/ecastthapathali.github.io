@@ -23,7 +23,7 @@ const About = () => {
           <div className="card-before absolute left-0 top-0 w-full h-px bg-gradient-to-r from-blue-700 to-crimson-700 z-10"></div>
         </div>
 
-        <div className="card text-white mr-8 ml-8 mt-10 pt-10 relative flex items-center justify-center p-8 overflow-hidden flex-basis-30 w-80 sm:w-96 box-shadow-card rounded-2xl w-auto shadow-custom">
+        <div className="card text-white mr-8 ml-8 mt-10 pt-10 relative flex items-center justify-center p-8 overflow-hidden flex-basis-30 sm:w-96 box-shadow-card rounded-2xl w-auto shadow-custom">
           <div className="content flex flex-col items-start gap-5">
             <p className="heading font-bold text-3xl">Innovation</p>
             <p className="para leading-normal">
