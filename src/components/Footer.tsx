@@ -46,17 +46,31 @@ const Footer = () => {
 
           <div className="mobile flex items-center mt-3">
             <FaMobileScreen className="mr-2" />
-            <span>+977 984534343, +977 988786876</span>
+            <span>
+              <a href="tel:+977984534343">+977 984534343</a>,
+              <a href="tel:+977988786876">+977 988786876</a>
+            </span>
           </div>
 
           <div className="email flex items-center mt-3">
             <FaRegEnvelope className="mr-2" />
-            <span>ecast@tcioe.edu.np</span>
+            <span>
+              <a href="mailto:ecast@tcioe.edu.np" target="_blank">
+                ecast@tcioe.edu.np
+              </a>
+            </span>
           </div>
 
           <div className="location flex items-center mt-3">
             <FaLocationDot className="mr-2" />
-            <span>Thapathali Campus, Kathmandu, Nepal</span>
+            <span>
+              <a
+                href="https://maps.app.goo.gl/CvzD96hgud5kjCVX8"
+                target="_blank"
+              >
+                Thapathali Campus, Kathmandu, Nepal
+              </a>
+            </span>
           </div>
         </div>
       </div>
