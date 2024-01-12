@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <BrowserRouter basename="/ECAST-Web-Frontend">
+{/*       <BrowserRouter basename="/ECAST-Web-Frontend"> */}
+        <BrowserRouter basename="/ECAST-Web-Frontend">
         <NavBar />
         <Routes>
           <Route path="/" Component={Home} />
