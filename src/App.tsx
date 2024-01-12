@@ -9,7 +9,7 @@ function App() {
   return (
     <>
 {/*       <BrowserRouter basename="/ECAST-Web-Frontend"> */}
-        <BrowserRouter>
+        <BrowserRouter basename="/">
         <NavBar />
         <Routes>
           <Route path="/" Component={Home} />
