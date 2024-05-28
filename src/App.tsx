@@ -14,7 +14,6 @@ import OurPastEvents from "./components/ourEvents/OurPastEvents";
 import UpcomingEvents from "./components/ourEvents/UpcomingEvents";
 import WholeEvents from "./components/ourEvents/WholeEvents";
 
-import Footer from "./components/Footer";
 import FormSub from "./components/FormSub";
 import Projects from "./components/Projects";
 
