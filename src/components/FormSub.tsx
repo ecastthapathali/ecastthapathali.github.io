@@ -4,7 +4,7 @@ const About = () => {
   const [positions, setPositions] = useState("");
   const [customPositions, setCustomPositions] = useState("");
 
-  const handlePositions = (e) => {
+  const handlePositions = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setPositions(e.target.value);
     if (e.target.value !== "others") {
       setCustomPositions("");
@@ -12,8 +12,9 @@ const About = () => {
   };
 
   const handleFileClick = () => {
-    {
-      document.getElementById("cv").click();
+    const cvElement = document.getElementById("cv") as HTMLInputElement | null;
+    if (cvElement) {
+      cvElement.click();
     }
   };
   return (
