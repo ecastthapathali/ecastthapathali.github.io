@@ -20,8 +20,9 @@ const NavBar: React.FC = () => {
             </span>
           </NavLink>
         </div>
-        <div className="hidden mx-4 sm:flex items-center gap-4">
+        <div className="hidden mx-4  sm:flex items-center gap-2">
           <Navlink to="/about">About</Navlink>
+          <Navlink to="/form"> Form</Navlink>
           <Navlink to="/committee">Committee</Navlink>
           <Navlink to="/projects">Projects</Navlink>
           <Navlink to="/gallery">Gallery</Navlink>
@@ -54,6 +55,7 @@ const NavBar: React.FC = () => {
         {isMenuOpen && (
           <div className="sm:hidden fixed top-20 text-center backdrop-blur bg-[#000000dd] w-full min-h-screen p-4 flex py-48 justify-evenly flex-col">
             <Navlink to="/about">About Us</Navlink>
+            <Navlink to="/form">Intake Form</Navlink>
             <Navlink to="/committee">Committee</Navlink>
             <Navlink to="/projects">Projects</Navlink>
             <Navlink to="/gallery">Gallery</Navlink>

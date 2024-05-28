@@ -27,13 +27,16 @@ const Footer = () => {
             <Link to="/" className="pt-3 hover:text-crimson">
               Home
             </Link>
-            <Link to="/committee" className="pt-3 hover:text-crimson">
-              Committee
-            </Link>
             <Link to="/about" className="pt-3 hover:text-crimson">
               About Us
             </Link>
-            <Link to="" className="pt-3 hover:text-crimson">
+            <Link to="/form" className="pt-3 hover:text-crimson">
+              Form
+            </Link>
+            <Link to="/committee" className="pt-3 hover:text-crimson">
+              Committee
+            </Link>
+            <Link to="/projects" className="pt-3 hover:text-crimson">
               Projects
             </Link>
             <Link to="" className="pt-3 hover:text-crimson">
@@ -47,7 +50,7 @@ const Footer = () => {
           <div className="mobile flex items-center mt-3">
             <FaMobileScreen className="mr-2" />
             <span>
-              <a href="tel:+977984534343">+977 984534343</a>,
+              <a href="tel:+9779745298983">+977 9745298983</a>,
               <a href="tel:+977988786876">+977 988786876</a>
             </span>
           </div>
