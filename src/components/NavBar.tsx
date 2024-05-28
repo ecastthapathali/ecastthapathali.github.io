@@ -26,6 +26,7 @@ const NavBar: React.FC = () => {
           <Navlink to="/committee">Committee</Navlink>
           <Navlink to="/projects">Projects</Navlink>
           <Navlink to="/gallery">Gallery</Navlink>
+          <Navlink to="/form">Intake</Navlink>
         </div>
         <div
           className="sm:hidden text-white hover:text-theme mx-4 transition-color duration-500"
@@ -58,7 +59,7 @@ const NavBar: React.FC = () => {
             <Navlink to="/form">Intake Form</Navlink>
             <Navlink to="/committee">Committee</Navlink>
             <Navlink to="/projects">Projects</Navlink>
-            <Navlink to="/gallery">Gallery</Navlink>
+            <Navlink to="/form">Gallery</Navlink>
           </div>
         )}
       </div>
