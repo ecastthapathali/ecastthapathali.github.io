@@ -1,5 +1,5 @@
 
-import "./css/whatisEcast.css";
+import "./css/WhatisECAST.css";
 
 const whatisEcast = () => {
   return (
