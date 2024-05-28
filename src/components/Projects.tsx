@@ -20,7 +20,8 @@ const projects = [
   },
 ];
 
-function App() {
+
+const Project  = () => {   
   return (
     <>
       <div className="App text-center p-8 bg-black min-h-screen">
@@ -58,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default Project;
