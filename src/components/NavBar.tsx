@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-[#2f3231] backdrop-blur shadow-2xl flex">
+      <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-[#2f3231] backdrop-blur shadow-2xl flex">
       <div className="flex w-[100%] items-center justify-between m-auto">
         <div className="flex px-4 items-center">
           <NavLink to="./" className=" flex items-center gap-2">
@@ -20,9 +20,15 @@ const NavBar: React.FC = () => {
             </span>
           </NavLink>
         </div>
+        </div>
+
         <div className="hidden mx-4 sm:flex items-center gap-4">
           <Navlink to="/">Home</Navlink>
+
+        <div className="hidden mx-4  sm:flex items-center gap-2">
+
           <Navlink to="/about">About</Navlink>
+          <Navlink to="/form"> Form</Navlink>
           <Navlink to="/committee">Committee</Navlink>
           <Navlink to="/projects">Projects</Navlink>
           <Navlink to="/gallery">Gallery</Navlink>
@@ -56,6 +62,7 @@ const NavBar: React.FC = () => {
         {isMenuOpen && (
           <div className="sm:hidden fixed top-20 text-center backdrop-blur bg-[#000000dd] w-full min-h-screen p-4 flex py-48 justify-evenly flex-col">
             <Navlink to="/about">About Us</Navlink>
+            <Navlink to="/form">Intake Form</Navlink>
             <Navlink to="/committee">Committee</Navlink>
             <Navlink to="/projects">Projects</Navlink>
             <Navlink to="/form">Gallery</Navlink>
@@ -63,6 +70,7 @@ const NavBar: React.FC = () => {
         )}
       </div>
     </nav>
+
   );
 };
 
