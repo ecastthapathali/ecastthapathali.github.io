@@ -28,7 +28,6 @@ const NavBar: React.FC = () => {
         <div className="hidden mx-4  sm:flex items-center gap-2">
 
           <Navlink to="/about">About</Navlink>
-          <Navlink to="/form"> Form</Navlink>
           <Navlink to="/committee">Committee</Navlink>
           <Navlink to="/projects">Projects</Navlink>
           <Navlink to="/gallery">Gallery</Navlink>
