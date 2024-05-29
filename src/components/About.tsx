@@ -72,11 +72,9 @@ const About = () => {
 
         <div className="card text-white mr-8 ml-8 mt-10 pt-10 relative flex items-center justify-center p-8 overflow-hidden flex-basis-30 sm:w-96 box-shadow-card rounded-2xl w-auto shadow-custom">
           <div className="content flex flex-col items-start gap-5">
-            <p className="heading font-bold text-3xl">Innovation</p>
+            <p className="heading font-bold text-3xl">Program</p>
             <p className="para leading-normal">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-              laboriosam at voluptas minus culpa deserunt delectus sapiente
-              inventore pariatur
+            ECAST conducts various programs, including flagship events like "My First Commit," a Software Fellowship Program focusing on emerging technologies... 
             </p>
             <button className="btn text-white no-underline p-2 font-semibold cursor-pointer rounded border-2 border-gray-300 outline-none transition-all hover:bg-crimson hover:border-transparent" onClick={innovationClick}>
               Read more

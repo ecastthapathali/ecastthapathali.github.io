@@ -21,11 +21,12 @@ const NavBar: React.FC = () => {
           </NavLink>
         </div>
         <div className="hidden mx-4 sm:flex items-center gap-4">
+          <Navlink to="/">Home</Navlink>
           <Navlink to="/about">About</Navlink>
           <Navlink to="/committee">Committee</Navlink>
           <Navlink to="/projects">Projects</Navlink>
           <Navlink to="/gallery">Gallery</Navlink>
-          <Navlink to="/form">Intake</Navlink>
+          <Navlink to="/intakeform">Intake</Navlink>
         </div>
         <div
           className="sm:hidden text-white hover:text-theme mx-4 transition-color duration-500"

@@ -23,7 +23,7 @@ function App() {
           <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
           <Route path="/committee" Component={Committee} />
-          <Route path="/form" Component={IntakeForm} />
+          <Route path="/intakeform" Component={IntakeForm} />
           <Route path="/whatisecast" Component={whatisEcast} />
           <Route path="/workshop" Component={Workshop} />
           <Route path="/innovation" Component={Innovation} />
