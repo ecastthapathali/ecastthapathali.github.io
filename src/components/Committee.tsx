@@ -21,34 +21,54 @@ const Committee = () => {
 
       setTeamMemberList([
         {
-          name: "Om Prakash Sharma",
+          name: "Dinanath Pandeya",
           position: "President",
-          imgSrc: "https://avatars.githubusercontent.com/u/66164291?v=4",
+          imgSrc: "https://avatars.githubusercontent.com/u/85153156?v=4",
         },
         {
-          name: "Prashant Raj Bista",
+          name: "Suprem Khatri",
           position: "Vice President",
-          imgSrc: "https://avatars.githubusercontent.com/u/85779064?v=4",
+          imgSrc: "https://avatars.githubusercontent.com/u/128308240?v=4",
         },
         {
-          name: "Namita Bhatta",
+          name: "Pratik Pokharel",
           position: "General Secretary",
+          imgSrc: "https://avatars.githubusercontent.com/u/62210661?v=4",
+        },
+        {
+          name: "Dikshya Khatri",
+          position: "Vice Secretary",
+          imgSrc: "https://avatars.githubusercontent.com/u/155458211?v=4",
+        },
+        {
+          name: "Kaushik Rayamajhi",
+          position: "Research and Development Team",
           imgSrc: "",
         },
         {
-          name: "Prahlad Acharya",
-          position: "Treasurer",
+          name: "Ninamhung Kulung",
+          position: "Technical Team",
+          imgSrc: "https://avatars.githubusercontent.com/u/118673128?v=4",
+        },
+        {
+          name: "Jesis Upadhayaya",
+          position: "Technical Team",
           imgSrc: "",
         },
         {
-          name: "Abhinav Chalise",
-          position: "Software Coordinator",
-          imgSrc: "https://avatars.githubusercontent.com/u/82364981?v=4",
+          name: "Ujjwal Dahal",
+          position: "Technical Team",
+          imgSrc: "https://avatars.githubusercontent.com/u/122596469?v=4",
         },
         {
-          name: "Nishan Khanal",
-          position: "Research and Development Head",
-          imgSrc: "https://avatars.githubusercontent.com/u/66510055?v=4",
+          name: "Prastut Nepal",
+          position: "Technical Team",
+          imgSrc: "",
+        },
+        {
+          name: "Atul Tiwari",
+          position: "Technical Team",
+          imgSrc: "https://avatars.githubusercontent.com/u/168094301?v=4",
         },
       ]);
     }, 1000);
