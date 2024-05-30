@@ -7,7 +7,9 @@ const IntakeForm: React.FC = () => {
     <>
       <form className="main_container">
         <div className="semi_container">
-          <div className="title">ecast intake form</div>
+        <p className="text-center font-bold text-xl" id="title">
+          ECAST INTAKE FORM
+          </p>
 
           <Card title="full name" placeholder="Enter Your Full Name" />
           <Card title="full campus roll no." placeholder="Enter Your Full Campus Roll No." />
@@ -48,6 +50,17 @@ const IntakeForm: React.FC = () => {
               <input type="radio" className="radio" name="position" />
               <span className="label-name">graphics designer</span>
             </div>
+
+            <div className="radio_box">
+              <input type="radio" className="radio" name="position" />
+              <span className="label-name">other</span>
+            </div>
+
+            <input
+              type="text"
+              className="input_box"
+              placeholder="Write Your Answer"
+            />
           </div>
 
           <Card title="describe yourself" placeholder="Describe Yourself" />
@@ -60,7 +73,8 @@ const IntakeForm: React.FC = () => {
               upload your CV/RESUME. Its recommended to make one
             </div>
             <div className="file-upload-wrapper">
-              <input type="file" name="file" id="file" className="file-input" />
+            <input type="file" name="file" id="file" className="file-input" />
+            <label htmlFor="file" className="file-btn">Choose File</label>
             </div>
           </div>
 

@@ -29,7 +29,11 @@ function App() {
           <Route path="/about" Component={About} />
           <Route path="/committee" Component={Committee} />
 
+          <Route path="/intakeform" Component={IntakeForm} />
+
+
           <Route path="/form" Component={IntakeForm} />
+
           <Route path="/whatisecast" Component={whatisEcast} />
           <Route path="/workshop" Component={Workshop} />
           <Route path="/innovation" Component={Innovation} />

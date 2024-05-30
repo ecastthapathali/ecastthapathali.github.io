@@ -18,7 +18,7 @@ const PastEventComp: React.FC<IPROPS> = ({ image ,topic,loadLink }) => {
 
        
         <div className="button-container2">
-          <button> <Link to={loadLink}> Read More</Link></button>
+          <button> <Link to={loadLink} target="_blank"> Read More</Link></button>
         </div>
         </div>
       </div>

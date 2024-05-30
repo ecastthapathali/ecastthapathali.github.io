@@ -19,10 +19,10 @@ const Events: React.FC<IPROPS> = ({ image ,topic,loadLink,registerLink }) => {
 
        
         <div className="button-container1">
-          <button> <Link to={registerLink}> Register</Link></button>
+          <button> <Link to={registerLink} target="_blank"> Register</Link></button>
         </div>
         <div className="button-container2">
-          <button> <Link to={loadLink}> Read More</Link></button>
+          <button> <Link to={loadLink} target="_blank"> Read More</Link></button>
         </div>
         </div>
       </div>
