@@ -11,7 +11,7 @@ export default {
         "theme-lqa": "#dbb73244",
         "theme-ha": "#dbb73288",
         "theme-hqa": "#dbb732bb",
-        crimson: '#DC143C',
+        crimson: "#DC143C",
       },
       brightness: {
         15: ".15",
