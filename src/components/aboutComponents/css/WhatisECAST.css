@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    width: 100vw;
+    height: 80vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+}
+
+
+@keyframes pulse-shadow {
+    0%, 100% {
+        box-shadow: 0 4px 10px rgba(95, 32, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 8px 20px rgba(95, 32, 255, 0.4);
+    }
+}
+
+.semi-container {
+    width: 80%;
+    height: 95%;
+    margin: 50px;
+    padding: 50px;
+    font-size: 17px;
+    box-shadow: 0 4px 10px rgba(95, 32, 255, 0.8);
+    animation: pulse-shadow 2s infinite ease-in-out; 
+
+    line-height: 29px;
+
+}
+
+body{
+    height: 100%;
+}
+
+.head{
+    font-weight: 700;
+    color:yellow;
+    display: inline-block;
+}
+
+
+
+
+

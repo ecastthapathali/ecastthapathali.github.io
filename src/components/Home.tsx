@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import Background from "../assets/Thapathali.jpg";
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
+  let eventsClick=()=>{
+    navigate("/ourevents")
+  }
   return (
     <main
       className={`flex h-[100vh] bg-no-repeat bg-cover`}
@@ -18,12 +25,14 @@ const Home = () => {
           Thapathali's Student Club : Elevating Students' Skillsets
         </h2>
         <div className="sm:flex-row flex flex-col lg:w-[50%] w-[100%] justify-center  gap-8 mb-4">
-          <button className="px-6 py-4 bg-white text-black font-bold rounded hover:bg-theme hover:text-white transition duration-300">
+          <button className="px-6 py-4 bg-white text-black font-bold rounded hover:bg-theme hover:text-white transition duration-300"  onClick={eventsClick}>
             Our Events
           </button>
-          <button className="px-6 py-4 bg-transparent text-white hover:text-theme hover:bg-white transition duration-500 border-2 border-white font-bold rounded">
-            Join Our Discord
-          </button>
+          <a target="_blank" href="https://discord.gg/PuApCFtq">
+            <button className="px-6 py-4 bg-transparent text-white hover:text-theme hover:bg-white transition duration-500 border-2 border-white font-bold rounded">
+              Join Our Discord
+            </button>
+          </a>
         </div>
       </div>
     </main>

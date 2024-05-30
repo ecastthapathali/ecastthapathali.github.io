@@ -23,8 +23,8 @@ export default {
         wideext: "2rem",
       },
       boxShadow: {
-        all: "0px 0px 15px 2px rgba(1,1,1, 0.3)",
-        custom: "7px 7px 17px #120f0f, -7px -7px 17px #151414",
+        all: "0px 0px 15px 2px rgba(1,1,1, 0.3)",    
+        custom: '7px 7px 17px #120f0f, -7px -7px 17px #151414',
       },
       fontSize: {
         "9xl": ["9rem"],
@@ -32,11 +32,16 @@ export default {
 
       animation: {
         texColCha: "texColCha 5s ease-in infinite",
+        glow: 'glow 2.5s ease-in-out infinite',
       },
       keyframes: {
         texColCha: {
           "0%,100%": { color: "#dbb732" },
           "40%,95%": { color: "#ffffff" },
+        },
+        glow: {
+          '0%, 100%': { boxShadow: '0 0 15px 5px rgba(59, 130, 200, 0.5)' },
+          '50%': { boxShadow: '0 0 30px 10px rgba(59, 130, 200, 1)' },
         },
       },
     },
