@@ -63,7 +63,7 @@ const Committee = () => {
         {
           name: "Prastut Nepal",
           position: "Technical Team",
-          imgSrc: "",
+          imgSrc: "https://avatars.githubusercontent.com/u/76209855?v=4",
         },
         {
           name: "Atul Tiwari",
