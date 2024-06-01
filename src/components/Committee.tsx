@@ -21,7 +21,7 @@ const Committee = () => {
 
       setTeamMemberList([
         {
-          name: "Dinanath Pandeya",
+          name: "Dinanath Padhya",
           position: "President",
           imgSrc: "https://avatars.githubusercontent.com/u/85153156?v=4",
         },
