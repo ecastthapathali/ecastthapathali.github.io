@@ -17,24 +17,25 @@ const About = () => {
       cvElement.click();
     }
   };
+
   return (
     <>
-      <div className="bg-black  min-h-screen">
-        <div className="flex flex-col items-center justify-center text-white pt-10">
-          <p className="text-center text-white font-bold text-xl">
-            ECAST INTAKE FORM
-          </p>
-          <div className="w-1/2 lg:w-1/4 mx-auto border-t-1 border-b-2 border-gray-500 my-4 mb-8"></div>
-        </div>
-        <div className="flex items-center justify-center  px-4">
-          <div className="bg- animate-glow p-8 rounded-3xl w-full max-w-3xl ">
+      <div className="bg-black min-h-screen">
+        <div className="flex items-center justify-center px-4">
+          <div className="animate-glow my-8 p-8 rounded-5xl w-full max-w-5xl">
+            <div className="flex flex-col items-center justify-center text-white">
+              <p className="text-center text-white font-bold text-xl">
+                ECAST INTAKE FORM
+              </p>
+              <div className="w-1/2 lg:w-1/4 mx-auto  border-t-1 border-b-2 border-red-500 my-4 mb-8"></div>
+            </div>
             <form>
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="name"
                 >
-                  Name
+                  Enter Your Name
                 </label>
                 <input
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary"
@@ -45,12 +46,12 @@ const About = () => {
                   required
                 />
               </div>
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="rollNo"
                 >
-                  Roll No
+                  Enter Roll No
                 </label>
                 <input
                   className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-secondary"
@@ -61,7 +62,7 @@ const About = () => {
                   required
                 />
               </div>
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="contact"
@@ -77,7 +78,7 @@ const About = () => {
                   required
                 />
               </div>
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="email"
@@ -93,7 +94,7 @@ const About = () => {
                   required
                 />
               </div>
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="describe"
@@ -101,14 +102,14 @@ const About = () => {
                   Describe Yourself
                 </label>
                 <textarea
-                  className="w-full px-3 py-2 border  rounded-lg focus:outline-none focus:border-secondary"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-secondary"
                   id="describe"
                   name="describe"
                   placeholder="Write Your Answer"
                   required
                 />
               </div>
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="positions"
@@ -116,7 +117,7 @@ const About = () => {
                   Post You Want To Apply For
                 </label>
                 <select
-                  className="w-full px-3 py-2 border  rounded-lg focus:outline-none focus:border-secondary"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-secondary"
                   id="positions"
                   name="positions"
                   value={positions}
@@ -141,7 +142,7 @@ const About = () => {
                 </select>
               </div>
               {positions === "others" && (
-                <div className="mb-4 p-8 bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+                <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                   <label
                     className="block text-white text-secondary mb-2"
                     htmlFor="customPositions"
@@ -160,15 +161,15 @@ const About = () => {
                   />
                 </div>
               )}
-              <div className="mb-4 p-8 bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="expectation"
                 >
-                  What do you hope to gain from joining the club?
+                  What Do You Hope To Gain From Joining The Club?
                 </label>
                 <textarea
-                  className="w-full px-3 py-2 border  rounded-lg focus:outline-none focus:border-secondary"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-secondary"
                   id="expectation"
                   name="expectation"
                   placeholder="Write Your Answer"
@@ -176,31 +177,31 @@ const About = () => {
                 />
               </div>
 
-              <div className="mb-4 p-8 bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="interests"
                 >
-                  Something that you are curently interested in outside of
-                  course
+                  Something That You Are Currently Interested In Outside Of
+                  Course
                 </label>
                 <textarea
-                  className="w-full px-3 py-2 border  rounded-lg focus:outline-none focus:border-secondary"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-secondary"
                   id="interests"
                   name="interests"
                   placeholder="Write Your Answer"
                   required
                 />
               </div>
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="link"
                 >
-                  Link to any social media
+                  Link To Any Social Media
                 </label>
                 <input
-                  className="w-full px-3 py-2  rounded-lg focus:outline-none focus:border-secondary"
+                  className="w-full px-3 py-2 rounded-lg focus:outline-none focus:border-secondary"
                   type="text"
                   id="link"
                   name="link"
@@ -208,7 +209,7 @@ const About = () => {
                   required
                 />
               </div>
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="cv"
@@ -232,7 +233,7 @@ const About = () => {
                 </button>
               </div>
 
-              <div className="mb-4 p-8  bg-[#2f3231] rounded-lg  w-full max-w-3xl">
+              <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
                 <label
                   className="block text-white text-secondary mb-2"
                   htmlFor="details"
@@ -240,7 +241,7 @@ const About = () => {
                   Other Details
                 </label>
                 <textarea
-                  className="w-full px-3 py-2  rounded-lg focus:outline-none focus:border-secondary"
+                  className="w-full px-3 py-2 rounded-lg focus:outline-none focus:border-secondary"
                   id="details"
                   name="details"
                 ></textarea>

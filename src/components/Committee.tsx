@@ -43,17 +43,17 @@ const Committee = () => {
         {
           name: "Kaushik Rayamajhi",
           position: "Research and Development Team",
-          imgSrc: "",
+          imgSrc: "https://github.com/Kaushik-Rayamajhi.png",
         },
         {
-          name: "Ninamhung Kulung",
+          name: "Ninamhang Kulung",
           position: "Technical Team",
           imgSrc: "https://avatars.githubusercontent.com/u/118673128?v=4",
         },
         {
           name: "Jesis Upadhayaya",
           position: "Technical Team",
-          imgSrc: "",
+          imgSrc: "https://github.com/JesisCoder.png",
         },
         {
           name: "Ujjwal Dahal",

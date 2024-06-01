@@ -31,8 +31,9 @@ export default {
       },
 
       animation: {
-        texColCha: "texColCha 5s ease-in infinite",
+        texColCha: "texColCha 2s ease-in-out infinite",
         glow: 'glow 2.5s ease-in-out infinite',
+        glow2 : 'glow 2.5s ease-out-in infinite',
       },
       keyframes: {
         texColCha: {
@@ -41,6 +42,10 @@ export default {
         },
         glow: {
           '0%, 100%': { boxShadow: '0 0 15px 5px rgba(59, 130, 200, 0.5)' },
+          '50%': { boxShadow: '0 0 30px 10px rgba(59, 130, 200, 1)' },
+        },
+        'animate-glow2': {
+          '0%, 100%': { boxShadow: '0 0 15px 5px rgba(100, 130, 200, 0.5)' },
           '50%': { boxShadow: '0 0 30px 10px rgba(59, 130, 200, 1)' },
         },
       },
