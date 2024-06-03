@@ -17,6 +17,7 @@ import Gallery from "./components/Gallery";
 import FormSub from "./components/FormSub";
 import Projects from "./components/Projects";
 
+
 function App() {
   const images = [
     "/images/1.jpg",
@@ -53,6 +54,8 @@ function App() {
           <Route path="/ourevents" Component={WholeEvents} />
           <Route path="/FormSub" Component={FormSub} />
           <Route path="/Projects" Component={Projects} />
+          
+          
         </Routes>
         <Footer />
       </BrowserRouter>
