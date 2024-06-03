@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
         <Navlink to="/committee">Committee</Navlink>
         <Navlink to="/projects">Projects</Navlink>
         <Navlink to="/gallery">Gallery</Navlink>
-        <Navlink to="/FormSub">Intake</Navlink>
+        {/* <Navlink to="/FormSub">Intake</Navlink> */}
       </div>
       <div
         className="sm:hidden text-white hover:text-theme mx-4 my-6 transition-color duration-500"
