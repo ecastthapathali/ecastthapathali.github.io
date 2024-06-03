@@ -40,7 +40,6 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" Component={Home} />
-          <Route path="/home" Component={Home} />
           <Route path="/about" Component={About} />
           <Route path="/committee" Component={Committee} />
           <Route path="/Gallery" element={<Gallery images={images} />} />
