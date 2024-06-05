@@ -70,6 +70,16 @@ const Committee = () => {
           position: "Technical Team",
           imgSrc: "https://avatars.githubusercontent.com/u/168094301?v=4",
         },
+        {
+          name: "Om Prakash Sharma",
+          position: "Consultant",
+          imgSrc: "https://avatars.githubusercontent.com/u/66164291?v=4",
+        },
+        {
+          name: "Prashant Raj Bist",
+          position: "Consultant",
+          imgSrc: "https://avatars.githubusercontent.com/u/85779064?v=4",
+        },
       ]);
     }, 1000);
   }, []);
