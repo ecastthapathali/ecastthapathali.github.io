@@ -340,7 +340,7 @@ const SubForm = () => {
                   className="block text-white text-secondary mb-2"
                   htmlFor="cv"
                 >
-                  Upload Your CV *
+                  Upload Your CV * (only pdf is accepted)
                 </label>
                 <input
                   className="w-full hidden px-3 py-2 rounded-lg focus:outline-none focus:border-secondary"
@@ -348,7 +348,7 @@ const SubForm = () => {
                   id="cv"
                   name="cv"
                   onChange={handleFileChange}
-                  accept=".pdf, image/*"
+                  accept=".pdf*"
                   required
                 />
                 <button
@@ -356,7 +356,7 @@ const SubForm = () => {
                   onClick={handleFileClick}
                   className="w-full px-3 rounded-full font-bold py-2 text-white hover:text-black hover:bg-white hover:border-white transition duration-500 border-2 border-white"
                 >
-                  Choose File 
+                  Choose File
                 </button>
                 {resumeName && (
                   <p className="text-white mt-2 text-sm italic text-center">
