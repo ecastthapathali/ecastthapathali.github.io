@@ -14,6 +14,7 @@ const SubForm = () => {
   const [resumeName, setResumeName] = useState<string>("");
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
 
+
   const [link1, setLink1] = useState<string>("");
   const [link2, setLink2] = useState<string>("");
   const [link3, setLink3] = useState<string>("");
@@ -121,8 +122,38 @@ const SubForm = () => {
     }
   };
 
+
   return (
     <>
+
+<div className="fixed top-0 bottom-0 left-0 right-0 w-full flex items-center justify-center bg-gray-900 bg-opacity-75 z-50">
+  <div className="relative bg-white text-black px-6 py-4 border-0 rounded-lg shadow-lg">
+    <span className="block sm:inline">
+      Intake application for the year 2024-2025 has been closed.
+    </span>
+    <button
+      className="absolute top-0 right-0 p-1 focus:outline-none"
+      onClick={() => (window.location.href = "http://ecast.tcioe.edu.np")}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className=" w-4 text-black"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
+     
       <div className="bg-black min-h-screen">
         <div className="flex items-center justify-center px-4">
           <div className="animate-glow my-8 p-8 rounded-5xl w-full max-w-5xl">
