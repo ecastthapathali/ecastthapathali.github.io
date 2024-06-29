@@ -35,7 +35,7 @@ const Committee = () => {
         {
           name: "Kaushik Rayamajhi",
           position: "Research and Development Team",
-          imgSrc: "https://github.com/Kaushik-Rayamajhi.png",
+          imgSrc: "https://avatars.githubusercontent.com/u/135457672?v=4",
         },
         {
           name: "Ninamhang Kulung",
@@ -45,7 +45,7 @@ const Committee = () => {
         {
           name: "Jesis Upadhayaya",
           position: "Technical Team",
-          imgSrc: "https://github.com/JesisCoder.png",
+          imgSrc: "https://avatars.githubusercontent.com/u/102139711?v=4",
         },
         {
           name: "Ujjwal Dahal",
