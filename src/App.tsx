@@ -43,7 +43,6 @@ function App() {
           <Route path="/about" Component={About} />
           <Route path="/committee" Component={Committee} />
           <Route path="/Gallery" element={<Gallery images={images} />} />
-          <Route path="/FormSub" Component={FormSub} />
           <Route path="/whatisecast" Component={whatisEcast} />
           <Route path="/workshop" Component={Workshop} />
           <Route path="/innovation" Component={Innovation} />
