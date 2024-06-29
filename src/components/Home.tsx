@@ -28,7 +28,7 @@ const Home = () => {
           <button className="px-6 py-4 bg-white text-black font-bold rounded hover:bg-theme hover:text-white transition duration-300"  onClick={eventsClick}>
             Our Events
           </button>
-          <a target="_blank" href="https://discord.gg/PuApCFtq">
+          <a target="_blank" href="https://discord.gg/4n8rquAp5H">
             <button className="px-6 py-4 bg-transparent text-white hover:text-theme hover:bg-white transition duration-500 border-2 border-white font-bold rounded">
               Join Our Discord
             </button>
