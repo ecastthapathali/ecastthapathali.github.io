@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/ecast-logo.png";
+import Logo from "../../public/ecast-logo.png";
 import { NavLink } from "react-router-dom";
 
 const NavBar: React.FC = () => {

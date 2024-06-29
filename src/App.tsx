@@ -14,7 +14,7 @@ import OurPastEvents from "./components/ourEvents/OurPastEvents";
 import UpcomingEvents from "./components/ourEvents/UpcomingEvents";
 import WholeEvents from "./components/ourEvents/WholeEvents";
 import Gallery from "./components/Gallery";
-import FormSub from "./components/FormSub";
+// import FormSub from "./components/FormSub"; // Uncomment Next Intake
 import Projects from "./components/Projects";
 
 
@@ -51,7 +51,7 @@ function App() {
           <Route path="/upcomingevents" Component={UpcomingEvents} />
           <Route path="/pastevents" Component={OurPastEvents} />
           <Route path="/ourevents" Component={WholeEvents} />
-          <Route path="/FormSub" Component={FormSub} />
+          {/* <Route path="/FormSub" Component={FormSub} />  */}
           <Route path="/Projects" Component={Projects} />
           
           

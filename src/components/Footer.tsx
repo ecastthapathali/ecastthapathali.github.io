@@ -1,4 +1,4 @@
-import Logo from "../assets/ecast-logo.png";
+import Logo from "../../public/ecast-logo.png";
 
 import {
   FaLinkedin,
