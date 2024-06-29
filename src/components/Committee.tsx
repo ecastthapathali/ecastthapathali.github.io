@@ -11,14 +11,6 @@ const Committee = () => {
   const [TeamMemberList, setTeamMemberList] = useState<Member[]>([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      //set TeamMemberList to the list of members from the backend
-      //fetch("https://ecast-backend.herokuapp.com/api/members")
-      //  .then((res) => res.json())
-      //  .then((data) => {
-      //    setTeamMemberList(data);
-      //  });
-
       setTeamMemberList([
         {
           name: "Dinanath Padhya",
@@ -76,13 +68,12 @@ const Committee = () => {
           imgSrc: "https://avatars.githubusercontent.com/u/66164291?v=4",
         },
         {
-          name: "Prashant Raj Bist",
+          name: "Prashant Raj Bista",
           position: "Consultant",
           imgSrc: "https://avatars.githubusercontent.com/u/85779064?v=4",
         },
       ]);
-    }, 1000);
-  }, []);
+    }, []);
 
   return (
     <section className="bg-gradient-to-t from-theme-lqa flex w-full text-center flex-col p-4">
