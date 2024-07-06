@@ -16,6 +16,7 @@ import Gallery from "./components/Gallery";
 // import FormSub from "./components/FormSub"; // Uncomment Next Intake
 import Projects from "./components/Projects";
 import NotFound from "./components/404";
+import Contact from "./components/contact";
 
 function App() {
   const images = [
@@ -52,6 +53,7 @@ function App() {
           {/* <Route path="/formsub" element={<FormSub />} /> */}
           <Route path="/projects" element={<Projects />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/contact-us" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>
