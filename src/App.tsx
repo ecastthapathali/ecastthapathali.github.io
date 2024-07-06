@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Committee from "./components/Committee";
-
 import Footer from "./components/Footer";
 // import IntakeForm from "./components/IntakeForm";
 import whatisEcast from "./components/aboutComponents/WhatisECAST";
@@ -16,7 +15,8 @@ import WholeEvents from "./components/ourEvents/WholeEvents";
 import Gallery from "./components/Gallery";
 // import FormSub from "./components/FormSub"; // Uncomment Next Intake
 import Projects from "./components/Projects";
-
+import NotFound from "./components/404";
+import Contact from "./components/contact";
 
 function App() {
   const images = [
@@ -39,21 +39,21 @@ function App() {
       <BrowserRouter basename="/">
         <NavBar />
         <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/about" Component={About} />
-          <Route path="/committee" Component={Committee} />
-          <Route path="/Gallery" element={<Gallery images={images} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/committee" element={<Committee />} />
+          <Route path="/gallery" element={<Gallery images={images} />} />
           <Route path="/whatisecast" Component={whatisEcast} />
-          <Route path="/workshop" Component={Workshop} />
-          <Route path="/innovation" Component={Innovation} />
-          <Route path="/research" Component={Research} />
-          <Route path="/upcomingevents" Component={UpcomingEvents} />
-          <Route path="/pastevents" Component={OurPastEvents} />
-          <Route path="/ourevents" Component={WholeEvents} />
-          {/* <Route path="/FormSub" Component={FormSub} />  */}
-          <Route path="/Projects" Component={Projects} />
-          
-          
+          <Route path="/workshop" element={<Workshop />} />
+          <Route path="/innovation" element={<Innovation />} />
+          <Route path="/research" element={<Research />} />
+          <Route path="/upcomingevents" element={<UpcomingEvents />} />
+          <Route path="/pastevents" element={<OurPastEvents />} />
+          <Route path="/ourevents" element={<WholeEvents />} />
+          {/* <Route path="/formsub" element={<FormSub />} /> */}
+          <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/contact-us" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>

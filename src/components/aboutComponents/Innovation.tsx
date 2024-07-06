@@ -1,5 +1,5 @@
 import {useNavigate } from "react-router-dom";
-import "./css/Innovation.css";
+
 
 const Innovation = () => {
 
@@ -17,13 +17,17 @@ const Innovation = () => {
         <div className="w-1/2 lg:w-1/4 mx-auto border-t-1 border-b-2 border-red-800 my-4"></div>
       </div>
 
-    <div className="container">
+    <div className="highlight text-white flex justify-between w-full h-auto pb-12 bg-black flex-col sm:flex-row sm:justify-center">
     <div className="semi-container">
     ECAST conducts various programs, including flagship events like "My First Commit," a Software Fellowship Program focusing on emerging technologies and web development. They organize competitions like the "Pride Month Design Competition" to raise awareness and celebrate LGBTQIA+ rights. Additionally, ECAST hosts seminars and talks such as "Unleashing the Art of Enquiry" and "Talk Show on Block Chain" to explore research and career prospects in technology fields. The society actively participates in projects like the development of the Thapathali Campus website and engages in initiatives like the Yathartha Tech-Fest, where they handle tasks such as proposal writing, social media management, website development, and event coordination. ECAST also conducts coding competitions, gaming events like the PUBG Competition, and workshops on topics ranging from ASP.NET to machine learning. Looking ahead, their future plans include organizing workshops, documentation sessions, and projects related to machine learning and blockchain, aiming to continue promoting technological innovation and skill development within the campus community.
+    <br />
+    <div className="flex justify-center">
+    <div className="button-container2 flex justify-center">
+    <br />
+  <button onClick={handleClick}>See Events</button>
+</div>
+</div>
 
-    <div className="button-container2">
-          <button onClick={handleClick}>   Read More</button>
-      </div>
     </div>
     </div>
     
