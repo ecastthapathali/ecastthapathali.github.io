@@ -61,7 +61,7 @@ const About = () => {
           <div className="content flex flex-col items-start gap-5">
             <p className="heading font-bold text-3xl">Research</p>
             <p className="para leading-normal">
-            In the formed new committee, a new post was introduced as Research and Development. This was led...
+            Undertaking research initiatives that delve into cutting-edge topics such as artificial intelligence, cybersecurity, machine learning and more ...
             </p>
             <button className="btn text-white no-underline p-2 font-semibold cursor-pointer rounded border-2 border-gray-300 outline-none transition-all hover:bg-crimson hover:border-transparent" onClick={researchClick}>
               Read more
