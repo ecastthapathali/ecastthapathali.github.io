@@ -24,7 +24,7 @@ const EventRegistration: React.FC = () => {
 
   useEffect(() => {
     const events: Event[] = [
-      { id: 'ai-writing-competition', title: 'AI Writing Competition', description: 'AI Writing Competition', image: '/src/components/ourEvents/EventsImages/event1.jpg' },
+      { id: 'ai-writing-competition', title: 'AI Writing Competition', description: 'ECAST is excited to announce its AI Writing Competition, a unique opportunity for aspiring writers and tech enthusiasts to explore the intersection of creativity and technology.', image: '/src/components/ourEvents/EventsImages/event1.jpg' },
       // Add more events as needed
     ];
     const selectedEvent = events.find(e => e.id === eventId);
@@ -128,8 +128,40 @@ const EventRegistration: React.FC = () => {
                 repeat={1}
                 cursor={false}
               />
+            
               
               <div className="article-themes-container bg-black text-white p-6 rounded-lg shadow-lg mt-6">
+                <TypeAnimation
+                  sequence={['Guidelines', 1000]}
+                  speed={50}
+                  wrapper="h3"
+                  className="text-xl font-semibold mb-2"
+                  repeat={1}
+                  cursor={false}
+                />
+                <ul className="list-disc pl-5 mb-4 text-center">
+                  {[
+                    'Participants must choose one of the provided themes.',
+                    'Articles should be well-researched and provide insights beyond basic concepts.',
+                    'Proper grammar, clarity, and structure are essential.',
+                    'Titles should be descriptive and engaging.',
+                    'The competition aims to encourage creativity and originality in addressing the chosen themes (less than 30% AI detection is acceptable).',
+                    'NO single entry may be submitted in more than one competition.',
+                    'Works previously published or accepted for publication are not eligible.',
+                    'An individual may submit only one entry.',
+                    'Use copyright-free images or create your own if necessary.',
+                    'Plagiarism above 5% is not acceptable.',
+                  ].map((item, index) => (
+                    <TypeAnimation
+                      key={index}
+                      sequence={[item, 1000]}
+                      speed={50}
+                      wrapper="li"
+                      cursor={false}
+                    />
+                  ))}
+                </ul>
+
                 <TypeAnimation
                   sequence={['Submission Details', 1000]}
                   speed={50}
@@ -142,8 +174,7 @@ const EventRegistration: React.FC = () => {
                   {[
                     'Deadline: Aug 2024',
                     'Format: Word Document or PDF',
-                    'Word Limit: [Specify limit]',
-                    'Submission Link/Email: [Provide details]',
+                    'Word Limit: 800-1500 words',
                   ].map((item, index) => (
                     <TypeAnimation
                       key={index}
@@ -232,9 +263,9 @@ const EventRegistration: React.FC = () => {
                   className="input-field" 
                 />
               
-              <div className="form-gap" />
-<button type="submit" className="submit-button">Submit</button>
-</form>
+                <div className="form-gap" />
+                <button type="submit" className="submit-button">Submit</button>
+              </form>
             </>
           ) : (
             <div className="bg-black text-white text-center h-screen flex flex-col justify-center items-center p-5">
