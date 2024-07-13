@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
               <div className="mobile flex justify-center items-center mt-3">
                 <FaPhoneVolume className="mr-2" />
                 <span>
-                  <a href="tel:+9779824274331">+977 9824274331</a>,
+                  <a href="tel:+9779824274331">+977 9824274331</a>
                 </span>
               </div>
               <div className="mobile flex justify-center items-center mt-3">

@@ -12,7 +12,6 @@ const Footer = () => {
             <img src={Logo} alt="Logo" className="h-14 w-14 justify-center mr-2" />
             <h1 className="text-2xl font-bold">ECAST</h1>
           </a>
-          <p className="text-sm">Connecting the brightest young minds in Engineering.</p>
         </div>
         <div className="quick-links flex justify-around flex-wrap max-w-5xl">
           <Link to="/" className="px-6 py-2 m-1 hover:text-crimson">
@@ -39,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="social text-white text-center ">
-        <h2 className="text-lg font-semibold">&nbsp;FOLLOW US</h2>
+
         <div className="social-links flex justify-center  pb-1 mt-2 mb-2">
           <a
             className="instagram text-3xl mx-3"

@@ -1,21 +1,20 @@
 .semi-container2 {
     width: 40%;
-    height: 40%;
+    height: auto; /* Change to auto for responsiveness */
     margin: 50px;
-    padding: 50px;
-    font-size: 17px;
+    padding: 20px; /* Reduced padding for smaller screens */
+    font-size: 1.1rem; /* Use rem for responsiveness */
     box-shadow: 0 4px 10px rgba(95, 32, 255, 0.8);
-    animation: pulse-shadow 2s infinite ease-in-out; 
+    animation: pulse-shadow 2s infinite ease-in-out;
     background-color: black;
     line-height: 29px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
-.container3{
+.container3 {
     height: 90%;
     width: 100vw;
     display: flex;
@@ -24,7 +23,7 @@
     background-color: black;
 }
 
-.container4{
+.container4 {
     height: 90%;
     display: flex;
     align-items: center;
@@ -33,23 +32,37 @@
     background-color: black;
 }
 
-.button-container3{
+.button-container3 {
     border: 3px solid var(--btn-bg);
     border-radius: 4px;
     color: var(--btn-bg);
     height: 3rem;
     width: 15rem;
-    font-size: 18px;
+    font-size: 1rem; /* Use rem for responsiveness */
     font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-container3:hover {
+    background-color: var(--btn-bg);
+    color: white;
 }
 
 
-.button-container3:hover{
-    background-color: var(--btn-bg);
-    color: white;
-    transition: all 0.2s ease-in-out;
+@media (max-width: 768px) {
+    .semi-container2 {
+        width: 80%;
+        margin: 20px auto; 
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .button-container3 {
+        width: 100%; 
+        font-size: 16px; 
+    }
 }
