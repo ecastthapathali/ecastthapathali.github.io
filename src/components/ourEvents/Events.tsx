@@ -13,7 +13,7 @@ const Events: React.FC<IPROPS> = ({ image, topic, loadLink, eventId }) => {
   return (
     <div className="image-container">
       <div className="semi-image">
-        <img className="images" src={image} alt="event" />
+        <img className="images" src={image} alt={topic} />
         <div className="title1">"{topic}"</div>
         <div className="btn-container">
           <div className="button-container1">

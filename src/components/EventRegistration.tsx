@@ -102,7 +102,6 @@ const EventRegistration: React.FC = () => {
     <div className="flex flex-col items-center justify-center bg-black text-white pt-5 pb-5">
       <div className="card text-white bg-black mr-8 ml-8 mt-10 pt-4 p-6 relative flex items-center justify-center overflow-hidden sm:w-full md:w-96 lg:w-[80%] xl:w-[60%] shadow-outline-red rounded-2xl shadow-custom">
         <div className="content flex flex-col items-center gap-5 w-full text-center">
-          
           {formSubmitted ? (
             <TypeAnimation
               sequence={['Your registration was successful!', 1000]}
@@ -128,8 +127,6 @@ const EventRegistration: React.FC = () => {
                 repeat={1}
                 cursor={false}
               />
-            
-              
               <div className="article-themes-container bg-black text-white p-6 rounded-lg shadow-lg mt-6">
                 <TypeAnimation
                   sequence={['Guidelines', 1000]}
@@ -152,13 +149,14 @@ const EventRegistration: React.FC = () => {
                     'Use copyright-free images or create your own if necessary.',
                     'Plagiarism above 5% is not acceptable.',
                   ].map((item, index) => (
-                    <TypeAnimation
-                      key={index}
-                      sequence={[item, 1000]}
-                      speed={50}
-                      wrapper="li"
-                      cursor={false}
-                    />
+                    <li key={index}>
+                      <TypeAnimation
+                        sequence={[item, 1000]}
+                        speed={50}
+                        wrapper="span"
+                        cursor={false}
+                      />
+                    </li>
                   ))}
                 </ul>
 
@@ -176,13 +174,14 @@ const EventRegistration: React.FC = () => {
                     'Format: Word Document or PDF',
                     'Word Limit: 800-1500 words',
                   ].map((item, index) => (
-                    <TypeAnimation
-                      key={index}
-                      sequence={[item, 1000]}
-                      speed={50}
-                      wrapper="li"
-                      cursor={false}
-                    />
+                    <li key={index}>
+                      <TypeAnimation
+                        sequence={[item, 1000]}
+                        speed={50}
+                        wrapper="span"
+                        cursor={false}
+                      />
+                    </li>
                   ))}
                 </ul>
 
@@ -262,7 +261,6 @@ const EventRegistration: React.FC = () => {
                   onChange={(e) => setSuggestion(e.target.value)} 
                   className="input-field" 
                 />
-              
                 <div className="form-gap" />
                 <button type="submit" className="submit-button">Submit</button>
               </form>
