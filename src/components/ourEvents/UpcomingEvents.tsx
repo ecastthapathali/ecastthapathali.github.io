@@ -5,10 +5,24 @@ import event1 from "./EventsImages/event1.jpg";
 
 const UpcomingEvents = () => {
   const upcomingEvents = [
-    { id: "ai-writing-competition", topic: "AI Writing Competition", image: event1 },
-    { id: "coming-soon", topic: "Coming Soon", image: comingsoon },
-    { id: "coming-soon-2", topic: "Coming Soon", image: comingsoon },
-    // Add more events as needed
+    {
+      id: "ai-writing-competition",
+      topic: "AI Writing Competition",
+      image: event1,
+      loadLink: `/register/ai-writing-competition`,
+    },
+    {
+      id: "coming-soon",
+      topic: "Coming Soon",
+      image: comingsoon,
+      loadLink: `/register/coming-soon`,
+    },
+    {
+      id: "coming-soon-2",
+      topic: "Coming Soon",
+      image: comingsoon,
+      loadLink: `/register/coming-soon-2`,
+    },
   ];
 
   return (
@@ -23,9 +37,10 @@ const UpcomingEvents = () => {
           {upcomingEvents.map(event => (
             <div className="semi-container1" key={event.id}>
               <Events
-                image={event.image} 
+                image={event.image}
                 topic={event.topic}
                 eventId={event.id}
+                loadLink={event.loadLink}
               />
             </div>
           ))}
