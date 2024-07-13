@@ -1,0 +1,90 @@
+.card {
+  background-color: black;
+  border-radius: 1rem;
+  width: 75%;
+}
+
+.event-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.event-description {
+  color: white;
+  width: 100%; /* Full width */
+  text-align: center; /* Centered text */
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%; /* Full width */
+}
+
+.input-field {
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #1e1e2f, #282a36);
+  color: white;
+  border: 2px solid #007BFF;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5),
+              inset 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-field:focus {
+  border-color: #00ffcc;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.8),
+              0 0 20px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.form-gap {
+  margin: 10px 0;
+}
+
+.submit-button {
+  background-color: #ff5722; 
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid blue; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.submit-button:hover {
+  transform: scale(1.05);
+  background-color: #e64a19; 
+  border-color: #ffe600;
+}
+.input-label {
+  text-align: left; 
+}
+
+
+.article-themes-container {
+  text-align: center; 
+}
+
+.article-themes-container ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.article-themes-container ul li {
+  text-align: center; 
+}

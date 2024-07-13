@@ -17,6 +17,9 @@ import Gallery from "./components/Gallery";
 import Projects from "./components/Projects";
 import NotFound from "./components/404";
 import Contact from "./components/contact";
+import EventRegistration from './components/EventRegistration';
+
+
 
 function App() {
   const images = [
@@ -39,21 +42,22 @@ function App() {
       <BrowserRouter basename="/">
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/committee" element={<Committee />} />
-          <Route path="/gallery" element={<Gallery images={images} />} />
-          <Route path="/whatisecast" Component={whatisEcast} />
-          <Route path="/workshop" element={<Workshop />} />
-          <Route path="/innovation" element={<Innovation />} />
-          <Route path="/research" element={<Research />} />
-          <Route path="/upcomingevents" element={<UpcomingEvents />} />
-          <Route path="/pastevents" element={<OurPastEvents />} />
-          <Route path="/ourevents" element={<WholeEvents />} />
-          {/* <Route path="/formsub" element={<FormSub />} /> */}
-          <Route path="/projects" element={<Projects />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/contact-us" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+<Route path="/about" element={<About />} />
+<Route path="/committee" element={<Committee />} />
+<Route path="/gallery" element={<Gallery images={images} />} />
+<Route path="/whatisecast" Component={whatisEcast} />
+<Route path="/workshop" element={<Workshop />} />
+<Route path="/innovation" element={<Innovation />} />
+<Route path="/research" element={<Research />} />
+<Route path="/upcomingevents" element={<UpcomingEvents />} />
+<Route path="/pastevents" element={<OurPastEvents />} />
+<Route path="/ourevents" element={<WholeEvents />} />
+<Route path="/projects" element={<Projects />} />
+<Route path="/contact-us" element={<Contact />} />
+<Route path="/register/:eventId" element={<EventRegistration />} />
+<Route path="*" element={<NotFound />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>
