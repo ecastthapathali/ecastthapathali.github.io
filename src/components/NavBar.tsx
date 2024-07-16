@@ -10,11 +10,11 @@ const NavBar: React.FC = () => {
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   return (
-    <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-slate-900 backdrop-filter backdrop-blur-lg  opacity-95 shadow-2xl flex">
+    <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-slate-900 backdrop-filter backdrop-blur-lg opacity-95 shadow-2xl flex">
       <div className="flex w-[100%] items-center justify-between m-auto">
         <div className="flex px-4 items-center">
           <NavLink to="/" className="flex items-center gap-2" onClick={closeMenu}>
@@ -33,8 +33,8 @@ const NavBar: React.FC = () => {
         <Navlink to="/projects" onClick={closeMenu}>Projects</Navlink>
         <Navlink to="/gallery" onClick={closeMenu}>Gallery</Navlink>
         <Navlink to="/contact-us" onClick={closeMenu}>Contact</Navlink>
-        {/* <Navlink to="/FormSub" onClick={closeMenu}>Intake</Navlink> */}
       </div>
+
       <div
         className="sm:hidden text-white hover:text-theme mx-4 my-6 transition-color duration-500"
         onClick={handleMenuToggle}
@@ -60,6 +60,7 @@ const NavBar: React.FC = () => {
           )}
         </svg>
       </div>
+
       {isMenuOpen && (
         <div className="sm:hidden fixed top-20 text-center backdrop-blur bg-[#000000dd] w-full min-h-screen p-4 flex py-48 justify-evenly flex-col">
           <Navlink to="/about" onClick={closeMenu}>About Us</Navlink>
@@ -67,7 +68,6 @@ const NavBar: React.FC = () => {
           <Navlink to="/projects" onClick={closeMenu}>Projects</Navlink>
           <Navlink to="/gallery" onClick={closeMenu}>Gallery</Navlink>
           <Navlink to="/contact-us" onClick={closeMenu}>Contact Us</Navlink>
-          {/* <Navlink to="/FormSub" onClick={closeMenu}>Intake Form</Navlink> */}
         </div>
       )}
     </nav>
@@ -77,7 +77,7 @@ const NavBar: React.FC = () => {
 interface NavlinkProps {
   to: string;
   children: React.ReactNode;
-  onClick?: () => void; 
+  onClick?: () => void;
 }
 
 const Navlink: React.FC<NavlinkProps> = ({ to, children, onClick }) => {
@@ -98,7 +98,7 @@ const Navlink: React.FC<NavlinkProps> = ({ to, children, onClick }) => {
     <NavLink
       to={baseurl + to}
       className={({ isActive }) => useClassName({ isActive })}
-      onClick={onClick} 
+      onClick={onClick}
     >
       {children}
     </NavLink>
