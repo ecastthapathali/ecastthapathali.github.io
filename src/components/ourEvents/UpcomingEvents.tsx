@@ -7,7 +7,7 @@ import event1 from "./EventsImages/event1.jpg";
 const UpcomingEvents = () => {
   const upcomingEvents = [
     {
-      id: "ai-writing-competition",
+      id: "article-submission",
       topic: "AI Writing Competition",
       image: event1,
     },

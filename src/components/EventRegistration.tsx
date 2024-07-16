@@ -6,9 +6,41 @@ import './EventRegistration.css';
 interface Event {
   id: string;
   title: string;
+  rules: string;
   description: string;
 }
+const showAlert = (message: string) => {
+  // Create background overlay
+  const bgOverlay = document.createElement("div");
+  bgOverlay.className = "fixed inset-0 bg-black bg-opacity-50 z-50";
 
+  // Create alert box
+  const alertBox = document.createElement("div");
+  alertBox.className = "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black p-6 rounded shadow-lg z-50 max-w-xs w-full text-center";
+
+  // Create close button
+  const closeButton = document.createElement("button");
+  closeButton.className = "absolute top-0 right-0 mt-2 mr-2 text-black";
+  closeButton.innerHTML = "&times;";
+  closeButton.onclick = () => {
+    document.body.removeChild(alertBox);
+    document.body.removeChild(bgOverlay);
+  };
+
+  // Append close button to alert box
+  alertBox.appendChild(closeButton);
+
+  // Create message paragraph
+  const messageParagraph = document.createElement("p");
+  messageParagraph.innerText = message;
+  
+  // Append message paragraph to alert box
+  alertBox.appendChild(messageParagraph);
+
+  // Append alert box and background overlay to the body
+  document.body.appendChild(bgOverlay);
+  document.body.appendChild(alertBox);
+};
 const EventRegistration: React.FC = () => {
   const { eventId } = useParams<{ eventId: string }>();
   const [event, setEvent] = useState<Event | null>(null);
@@ -25,54 +57,66 @@ const EventRegistration: React.FC = () => {
   const [document, setDocument] = useState<File | null>(null);
   const [inspiration, setInspiration] = useState<string>("");
   const [contribution, setContribution] = useState<string>("");
-  const [alertMessage, setAlertMessage] = useState<string | null>(null);
-
+  const[wordcount, setWordcount] = useState<string>("");
+  
   useEffect(() => {
+    
     const events: Event[] = [
-      { id: 'ai-writing-competition', title: 'AI Writing Competition', description: 'ECAST is excited to announce its AI Writing Competition, a unique opportunity for aspiring writers and tech enthusiasts to explore the intersection of creativity and technology.' },
+      { id: 'article-submission', title: 'AI Writing Competition', rules: 'https://docs.google.com/document/d/1Z_hiLmqXnLX4CG5aNLG9gyI6q6Gv7UJpiZSfTcVuAOM/edit?usp=sharing', description: 'ECAST is excited to announce its AI Writing Competition, a unique opportunity for aspiring writers and tech enthusiasts to explore the intersection of creativity and technology.' },
       // Add more events as needed
     ];
+    
     const selectedEvent = events.find(e => e.id === eventId);
     setEvent(selectedEvent || null);
   }, [eventId]);
 
-  const showAlert = (message: string) => {
-    setAlertMessage(message);
-    setTimeout(() => setAlertMessage(null), 3000);
-  };
+
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     
     const formData = new FormData();
     formData.append("name", name);
-    formData.append("college", college);
+    formData.append("college_name", college);
     formData.append("email", email);
     formData.append("phone", phone);
-    formData.append("articleTitle", articleTitle);
-    formData.append("chosenTheme", chosenTheme);
+    formData.append("title", articleTitle);
+    formData.append("theme", chosenTheme);
+    formData.append("word_count", wordcount);
     formData.append("abstract", abstract);
     formData.append("confirmation", confirmation ? "true" : "false");
     formData.append("agreement", agreement ? "true" : "false");
-    formData.append("inspiration", inspiration);
-    formData.append("contribution", contribution);
+    formData.append("question_1", inspiration);
+    formData.append("question_2", contribution);
     if (document) {
-      formData.append("document", document);
+      formData.append("article_file", document);
     }
 
     try {
-      const response = await fetch("https://ecast.pythonanywhere.com/api/event/form/", {
+      const response = await fetch("https://ecast.pythonanywhere.com/api/article/form/", {
         method: "POST",
         body: formData,
       });
 
       if (response.status !== 201) {
         const responseData = await response.json();
-        showAlert(responseData.error || "Failed to submit form. Please try again.");
+        console.log("Error response:", responseData);
+
+        if (responseData.error && responseData.error.includes("email must make a unique set")) {
+          showAlert("Error: The email is already used. Please use a unique email.");
+        } else if (responseData.error && responseData.error.includes("Enter a valid email address.")) {
+          showAlert("Error: Please enter a valid email adress")
+        }
+        else if (responseData.error) {
+          showAlert(`Error: ${responseData.error}`);
+        } else {
+          showAlert("Failed to submit form. Please try again.");
+        }
         return;
       }
 
-      showAlert("Form submitted successfully!");
+      const responseData = await response.json();
+      console.log("Success:", responseData);
       setFormSubmitted(true);
     } catch (error) {
       console.log("Error:", error);
@@ -87,9 +131,6 @@ const EventRegistration: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center bg-black text-white pt-5 pb-5">
-      {alertMessage && (
-        <div className="alert">{alertMessage}</div>
-      )}
       <div className="card text-white bg-black mr-8 ml-8 mt-10 pt-4 p-6 relative flex items-center justify-center overflow-hidden sm:w-full md:w-96 lg:w-[80%] xl:w-[60%] shadow-outline-red rounded-2xl shadow-custom">
         <div className="content flex flex-col items-center gap-5 w-full text-center">
           {formSubmitted ? (
@@ -97,13 +138,17 @@ const EventRegistration: React.FC = () => {
               sequence={['Your registration was successful!', 1000]}
               speed={50}
               wrapper="p"
-              className="success-message"
+              className="success-message "
               repeat={1}
               cursor={false}
             />
           ) : event ? (
             <>
+            
               <h2 className="event-title text-2xl font-bold">{event.title}</h2>
+              <p className="event-rules">
+    Read the Guidelines: <a href={event.rules} target="_blank" rel="noopener noreferrer" className="highlight-link">HERE</a>
+  </p>
               <TypeAnimation
                 sequence={[event.description, 1000]}
                 speed={50}
@@ -116,7 +161,7 @@ const EventRegistration: React.FC = () => {
                 <label className="input-label">Full Name</label>
                 <input 
                   type="text" 
-                  placeholder="Eg- Abhishek Panthee" 
+                  placeholder="Your Name Here" 
                   value={name} 
                   onChange={(e) => setName(e.target.value)} 
                   required 
@@ -126,7 +171,7 @@ const EventRegistration: React.FC = () => {
                 <label className="input-label">College/University</label>
                 <input 
                   type="text" 
-                  placeholder="Eg- Thapathali Campus" 
+                  placeholder="Your Campus Name Here" 
                   value={college} 
                   onChange={(e) => setCollege(e.target.value)} 
                   required 
@@ -136,7 +181,7 @@ const EventRegistration: React.FC = () => {
                 <label className="input-label">Email</label>
                 <input 
                   type="email" 
-                  placeholder="Eg- ramshyam@gmail.com" 
+                  placeholder="ramshyam@gmail.com" 
                   value={email} 
                   onChange={(e) => setEmail(e.target.value)} 
                   required 
@@ -146,7 +191,7 @@ const EventRegistration: React.FC = () => {
                 <label className="input-label">Contact</label>
                 <input 
                   type="tel" 
-                  placeholder="+977 9824499081" 
+                  placeholder="+977 9800000000" 
                   value={phone} 
                   onChange={(e) => setPhone(e.target.value)} 
                   required 
@@ -163,19 +208,40 @@ const EventRegistration: React.FC = () => {
                   className="input-field" 
                 />
                 <div className="form-gap" />
-                <label className="input-label">Chosen Theme</label>
+                <label className="input-label">Word Count</label>
                 <input 
-                  type="text" 
-                  placeholder="Eg - Emerging Technologies" 
-                  value={chosenTheme} 
-                  onChange={(e) => setChosenTheme(e.target.value)} 
+                  type="word_count" 
+                  placeholder="1500" 
+                  value={wordcount} 
+                  onChange={(e) => setWordcount(e.target.value)} 
                   required 
                   className="input-field" 
                 />
                 <div className="form-gap" />
+                <label className="input-label">Chosen Theme</label>
+                <select
+                  className="input-field"
+                 
+                  value={chosenTheme}
+                  onChange={(e) => setChosenTheme(e.target.value)}
+                  required
+                >
+
+                  <option className="text-black" value="">Select Theme</option>
+                  <option className="text-black" value="Emerging Technologies">Emerging Technologies</option>
+                  <option className="text-black" value="Artificial Intelligence and Machine Learning">
+                  Artificial Intelligence and Machine Learning
+                  </option>
+                  <option className="text-black" value="Cybersecurity and Privacy">Cybersecurity and Privacy</option>
+                  <option className="text-black" value="Innovation and Future Trends">Innovation and Future Trends</option>
+                  <option className="text-black" value="Technology in Society">Technology in Society</option>
+                 
+                </select>
+            
+                <div className="form-gap" />
                 <label className="input-label">Abstract or Summary of the Article</label>
                 <textarea 
-                  placeholder="Abstract or Summary of the Article" 
+                  placeholder="Your Summary Here" 
                   value={abstract} 
                   onChange={(e) => setAbstract(e.target.value)} 
                   required 
@@ -227,7 +293,10 @@ const EventRegistration: React.FC = () => {
                   />
                   &nbsp; I agree to the competition rules, including plagiarism guidelines.
                 </label>
-                <button type="submit" className="submit-button">Submit</button>
+                <div className="submit-container">
+
+                <button type="submit" className="submit-button my-5">Submit</button>
+                </div>
               </form>
             </>
           ) : (
