@@ -7,53 +7,38 @@ interface Event {
   id: string;
   title: string;
   description: string;
-  image: string;
 }
 
 const EventRegistration: React.FC = () => {
   const { eventId } = useParams<{ eventId: string }>();
   const [event, setEvent] = useState<Event | null>(null);
+  const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
   const [name, setName] = useState<string>("");
+  const [college, setCollege] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
-  const [college, setCollege] = useState<string>("");
-  const [suggestion, setSuggestion] = useState<string>("");
-  const [documents, setDocuments] = useState<File | null>(null);
-  const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
-  const [link2, setLink2] = useState<string>("");
+  const [articleTitle, setArticleTitle] = useState<string>("");
+  const [chosenTheme, setChosenTheme] = useState<string>("");
+  const [abstract, setAbstract] = useState<string>("");
+  const [confirmation, setConfirmation] = useState<boolean>(false);
+  const [agreement, setAgreement] = useState<boolean>(false);
+  const [document, setDocument] = useState<File | null>(null);
+  const [inspiration, setInspiration] = useState<string>("");
+  const [contribution, setContribution] = useState<string>("");
+  const [alertMessage, setAlertMessage] = useState<string | null>(null);
 
   useEffect(() => {
     const events: Event[] = [
-      { id: 'ai-writing-competition', title: 'AI Writing Competition', description: 'ECAST is excited to announce its AI Writing Competition, a unique opportunity for aspiring writers and tech enthusiasts to explore the intersection of creativity and technology.', image: '/src/components/ourEvents/EventsImages/event1.jpg' },
+      { id: 'ai-writing-competition', title: 'AI Writing Competition', description: 'ECAST is excited to announce its AI Writing Competition, a unique opportunity for aspiring writers and tech enthusiasts to explore the intersection of creativity and technology.' },
       // Add more events as needed
     ];
     const selectedEvent = events.find(e => e.id === eventId);
-    console.log('Selected Event:', selectedEvent);
     setEvent(selectedEvent || null);
   }, [eventId]);
 
   const showAlert = (message: string) => {
-    const bgOverlay = document.createElement("div");
-    bgOverlay.className = "fixed inset-0 bg-black bg-opacity-50 z-50";
-
-    const alertBox = document.createElement("div");
-    alertBox.className = "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black p-6 rounded shadow-lg z-50 max-w-xs w-full text-center";
-
-    const closeButton = document.createElement("button");
-    closeButton.className = "absolute top-0 right-0 mt-2 mr-2 text-black";
-    closeButton.innerHTML = "&times;";
-    closeButton.onclick = () => {
-      document.body.removeChild(alertBox);
-      document.body.removeChild(bgOverlay);
-    };
-
-    alertBox.appendChild(closeButton);
-    const messageParagraph = document.createElement("p");
-    messageParagraph.innerText = message;
-    alertBox.appendChild(messageParagraph);
-
-    document.body.appendChild(bgOverlay);
-    document.body.appendChild(alertBox);
+    setAlertMessage(message);
+    setTimeout(() => setAlertMessage(null), 3000);
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -61,14 +46,19 @@ const EventRegistration: React.FC = () => {
     
     const formData = new FormData();
     formData.append("name", name);
+    formData.append("college", college);
     formData.append("email", email);
     formData.append("phone", phone);
-    formData.append("college", college);
-    formData.append("suggestions", suggestion);
-    if (documents) {
-      formData.append("documents", documents);
+    formData.append("articleTitle", articleTitle);
+    formData.append("chosenTheme", chosenTheme);
+    formData.append("abstract", abstract);
+    formData.append("confirmation", confirmation ? "true" : "false");
+    formData.append("agreement", agreement ? "true" : "false");
+    formData.append("inspiration", inspiration);
+    formData.append("contribution", contribution);
+    if (document) {
+      formData.append("document", document);
     }
-    formData.append("facebook_link", link2);
 
     try {
       const response = await fetch("https://ecast.pythonanywhere.com/api/event/form/", {
@@ -78,13 +68,10 @@ const EventRegistration: React.FC = () => {
 
       if (response.status !== 201) {
         const responseData = await response.json();
-        console.log("Error response:", responseData);
         showAlert(responseData.error || "Failed to submit form. Please try again.");
         return;
       }
 
-      const responseData = await response.json();
-      console.log("Success:", responseData);
       showAlert("Form submitted successfully!");
       setFormSubmitted(true);
     } catch (error) {
@@ -94,12 +81,15 @@ const EventRegistration: React.FC = () => {
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setDocuments(e.target.files[0]);
+      setDocument(e.target.files[0]);
     }
   };
 
   return (
     <div className="flex flex-col items-center justify-center bg-black text-white pt-5 pb-5">
+      {alertMessage && (
+        <div className="alert">{alertMessage}</div>
+      )}
       <div className="card text-white bg-black mr-8 ml-8 mt-10 pt-4 p-6 relative flex items-center justify-center overflow-hidden sm:w-full md:w-96 lg:w-[80%] xl:w-[60%] shadow-outline-red rounded-2xl shadow-custom">
         <div className="content flex flex-col items-center gap-5 w-full text-center">
           {formSubmitted ? (
@@ -114,11 +104,6 @@ const EventRegistration: React.FC = () => {
           ) : event ? (
             <>
               <h2 className="event-title text-2xl font-bold">{event.title}</h2>
-              <img 
-                src={event.image} 
-                alt={event.title} 
-                className="event-image" 
-              />
               <TypeAnimation
                 sequence={[event.description, 1000]}
                 speed={50}
@@ -127,141 +112,121 @@ const EventRegistration: React.FC = () => {
                 repeat={1}
                 cursor={false}
               />
-              <div className="article-themes-container bg-black text-white p-6 rounded-lg shadow-lg mt-6">
-                <TypeAnimation
-                  sequence={['Guidelines', 1000]}
-                  speed={50}
-                  wrapper="h3"
-                  className="text-xl font-semibold mb-2"
-                  repeat={1}
-                  cursor={false}
-                />
-                <ul className="list-disc pl-5 mb-4 text-center">
-                  {[
-                    'Participants must choose one of the provided themes.',
-                    'Articles should be well-researched and provide insights beyond basic concepts.',
-                    'Proper grammar, clarity, and structure are essential.',
-                    'Titles should be descriptive and engaging.',
-                    'The competition aims to encourage creativity and originality in addressing the chosen themes (less than 30% AI detection is acceptable).',
-                    'NO single entry may be submitted in more than one competition.',
-                    'Works previously published or accepted for publication are not eligible.',
-                    'An individual may submit only one entry.',
-                    'Use copyright-free images or create your own if necessary.',
-                    'Plagiarism above 5% is not acceptable.',
-                  ].map((item, index) => (
-                    <li key={index}>
-                      <TypeAnimation
-                        sequence={[item, 1000]}
-                        speed={50}
-                        wrapper="span"
-                        cursor={false}
-                      />
-                    </li>
-                  ))}
-                </ul>
-
-                <TypeAnimation
-                  sequence={['Submission Details', 1000]}
-                  speed={50}
-                  wrapper="h3"
-                  className="text-xl font-semibold mb-2"
-                  repeat={1}
-                  cursor={false}
-                />
-                <ul className="list-disc pl-5 mb-4 text-center">
-                  {[
-                    'Deadline: Aug 2024',
-                    'Format: Word Document or PDF',
-                    'Word Limit: 800-1500 words',
-                  ].map((item, index) => (
-                    <li key={index}>
-                      <TypeAnimation
-                        sequence={[item, 1000]}
-                        speed={50}
-                        wrapper="span"
-                        cursor={false}
-                      />
-                    </li>
-                  ))}
-                </ul>
-
-                <TypeAnimation
-                  sequence={['Who Can Participate?', 1000]}
-                  speed={50}
-                  wrapper="h3"
-                  className="text-xl font-semibold mb-2"
-                  repeat={1}
-                  cursor={false}
-                />
-                <p className="text-lg text-center">
-                  <TypeAnimation
-                    sequence={['Anyone interested in the competition is welcome to participate!', 1000]}
-                    speed={50}
-                    wrapper="span"
-                    cursor={false}
-                  />
-                </p>
-              </div>
-
               <form onSubmit={handleSubmit} className="rsvp-form w-full">
+                <label className="input-label">Full Name</label>
                 <input 
                   type="text" 
-                  placeholder="Name" 
+                  placeholder="Eg- Abhishek Panthee" 
                   value={name} 
                   onChange={(e) => setName(e.target.value)} 
                   required 
                   className="input-field" 
                 />
                 <div className="form-gap" />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  value={email} 
-                  onChange={(e) => setEmail(e.target.value)} 
-                  required 
-                  className="input-field" 
-                />
-                <div className="form-gap" />
-                <input 
-                  type="tel" 
-                  placeholder="Phone Number" 
-                  value={phone} 
-                  onChange={(e) => setPhone(e.target.value)} 
-                  required 
-                  className="input-field" 
-                />
-                <div className="form-gap" />
+                <label className="input-label">College/University</label>
                 <input 
                   type="text" 
-                  placeholder="College Name" 
+                  placeholder="Eg- Thapathali Campus" 
                   value={college} 
                   onChange={(e) => setCollege(e.target.value)} 
                   required 
                   className="input-field" 
                 />
                 <div className="form-gap" />
+                <label className="input-label">Email</label>
                 <input 
-                  type="text" 
-                  placeholder="Facebook Link" 
-                  value={link2} 
-                  onChange={(e) => setLink2(e.target.value)} 
+                  type="email" 
+                  placeholder="Eg- ramshyam@gmail.com" 
+                  value={email} 
+                  onChange={(e) => setEmail(e.target.value)} 
+                  required 
                   className="input-field" 
                 />
                 <div className="form-gap" />
+                <label className="input-label">Contact</label>
+                <input 
+                  type="tel" 
+                  placeholder="+977 9824499081" 
+                  value={phone} 
+                  onChange={(e) => setPhone(e.target.value)} 
+                  required 
+                  className="input-field" 
+                />
+                <div className="form-gap" />
+                <label className="input-label">Title of the Article</label>
+                <input 
+                  type="text" 
+                  placeholder="Title of the Article" 
+                  value={articleTitle} 
+                  onChange={(e) => setArticleTitle(e.target.value)} 
+                  required 
+                  className="input-field" 
+                />
+                <div className="form-gap" />
+                <label className="input-label">Chosen Theme</label>
+                <input 
+                  type="text" 
+                  placeholder="Eg - Emerging Technologies" 
+                  value={chosenTheme} 
+                  onChange={(e) => setChosenTheme(e.target.value)} 
+                  required 
+                  className="input-field" 
+                />
+                <div className="form-gap" />
+                <label className="input-label">Abstract or Summary of the Article</label>
+                <textarea 
+                  placeholder="Abstract or Summary of the Article" 
+                  value={abstract} 
+                  onChange={(e) => setAbstract(e.target.value)} 
+                  required 
+                  className="input-field" 
+                />
+                <div className="form-gap" />
+                <label className="input-label">What inspired you to choose this particular theme for your article?</label>
+                <textarea 
+                  placeholder="Your Answer" 
+                  value={inspiration} 
+                  onChange={(e) => setInspiration(e.target.value)} 
+                  required 
+                  className="input-field" 
+                />
+                <div className="form-gap" />
+                <label className="input-label">How do you think your article contributes to understanding or exploring the chosen topic in a unique way?</label>
+                <textarea 
+                  placeholder="Your Answer" 
+                  value={contribution} 
+                  onChange={(e) => setContribution(e.target.value)} 
+                  required 
+                  className="input-field" 
+                />
+                <div className="form-gap" />
+                <label className="input-label">Upload your document ( .doc , .docx )</label>
                 <input 
                   type="file" 
                   onChange={handleFileChange} 
                   required 
                   className="input-field" 
+                  accept=".doc,.docx" 
                 />
                 <div className="form-gap" />
-                <textarea 
-                  placeholder="Suggestions" 
-                  value={suggestion} 
-                  onChange={(e) => setSuggestion(e.target.value)} 
-                  className="input-field" 
-                />
-                <div className="form-gap" />
+                <label className="checkbox-label">
+                  <input 
+                    type="checkbox" 
+                    checked={confirmation} 
+                    onChange={(e) => setConfirmation(e.target.checked)} 
+                    required 
+                  />
+                  &nbsp; I confirm that the article is my own work and has not been previously published.
+                </label>
+                <label className="checkbox-label">
+                  <input 
+                    type="checkbox" 
+                    checked={agreement} 
+                    onChange={(e) => setAgreement(e.target.checked)} 
+                    required 
+                  />
+                  &nbsp; I agree to the competition rules, including plagiarism guidelines.
+                </label>
                 <button type="submit" className="submit-button">Submit</button>
               </form>
             </>

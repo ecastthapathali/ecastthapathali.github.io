@@ -28,9 +28,9 @@
 .rsvp-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Align items to the start */
   gap: 10px;
-  width: 100%; /* Full width */
+  width: 100%; 
 }
 
 .input-field {
@@ -71,10 +71,12 @@
   background-color: #e64a19; 
   border-color: #ffe600;
 }
+
 .input-label {
   text-align: left; 
+  display: block;
+  width: 100%; 
 }
-
 
 .article-themes-container {
   text-align: center; 
@@ -88,3 +90,50 @@
 .article-themes-container ul li {
   text-align: center; 
 }
+
+.checkbox-label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #4a90e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #357abf;
+}
+
+.btn-back {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  color: #4a90e2;
+}
+
+.btn-back:hover {
+  color: #357abf;
+}
+
+.success-message {
+  font-size: 1.5rem;
+  color: green;
+}
+.alert {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
