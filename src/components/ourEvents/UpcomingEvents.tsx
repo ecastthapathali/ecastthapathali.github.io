@@ -8,7 +8,7 @@ const UpcomingEvents = () => {
   const upcomingEvents = [
     {
       id: "article-submission",
-      topic: "AI Writing Competition",
+      topic: "Article Writing Competition",
       image: event1,
     },
     {

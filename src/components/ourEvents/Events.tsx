@@ -11,7 +11,7 @@ interface IPROPS {
 const Events: React.FC<IPROPS> = ({ image, topic, eventId }) => {
   const getReadMoreLink = (eventId: string): string => {
     const links: Record<string, string> = {
-      'article-submission': 'https://docs.google.com/document/d/1Z_hiLmqXnLX4CG5aNLG9gyI6q6Gv7UJpiZSfTcVuAOM/edit?usp=sharing', 
+      'article-submission': 'https://bit.ly/ecast-article-guidelines', 
       'coming-soon-2': '#',
       // Add more event IDs and their corresponding links here
     };
