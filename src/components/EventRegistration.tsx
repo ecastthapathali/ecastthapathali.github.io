@@ -64,10 +64,10 @@ const EventRegistration: React.FC = () => {
     const events: Event[] = [
       {
         id: "article-submission",
-        title: "AI Writing Competition",
+        title: "Article Writing Competition",
         rules: "https://bit.ly/ecast-article-guidelines",
         description:
-          "ECAST is excited to announce its AI Writing Competition, a unique opportunity for aspiring writers and tech enthusiasts to explore the intersection of creativity and technology.",
+          "ECAST is excited to announce its Article Writing Competition, a unique opportunity for aspiring writers and tech enthusiasts to explore the intersection of creativity and technology.",
       },
       // Add more events as needed
     ];
