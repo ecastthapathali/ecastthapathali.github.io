@@ -63,6 +63,7 @@ const NavBar: React.FC = () => {
 
       {isMenuOpen && (
         <div className="sm:hidden fixed top-20 text-center backdrop-blur bg-[#000000dd] w-full min-h-screen p-4 flex py-48 justify-evenly flex-col">
+          <Navlink to="/" onClick={closeMenu}>Home</Navlink>
           <Navlink to="/about" onClick={closeMenu}>About Us</Navlink>
           <Navlink to="/committee" onClick={closeMenu}>Committee</Navlink>
           <Navlink to="/projects" onClick={closeMenu}>Projects</Navlink>
