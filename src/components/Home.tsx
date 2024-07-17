@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Background from "../assets/Thapathali.jpg";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -21,18 +21,17 @@ const Home = () => {
         </h1>
         <h2 className="lg:text-xl text-center lg:text-left font-mono">
           "Electronics and Computer Community Amidst Students, Thapathali"
-       
           <TypeAnimation
-  sequence={[
-    `     "      Connecting the brightest young minds in Engineering "`,
-    1000, // Pause for 1 second
-  ]}
-  speed={25}
-  wrapper="h2"
-  className="lg:text-xl text-center lg:text-center font-mono"
-  cursor={false}
-/>
-         </h2>
+            sequence={[
+              `     "      Connecting the brightest young minds in Engineering "`,
+              1000, // Pause for 1 second
+            ]}
+            speed={25}
+            wrapper="h2"
+            className="lg:text-xl text-center lg:text-center font-mono"
+            cursor={false}
+          />
+        </h2>
         <h2 className="lg:text-xl text-center lg:text-left bg-white text-black p-2 rounded shadow-all shadow-white tracking-wide font-mono">
           Thapathali's Student Club : Elevating Students' Skillsets
         </h2>
@@ -43,7 +42,11 @@ const Home = () => {
           >
             Our Events
           </button>
-          <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/4n8rquAp5H">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://discord.gg/4n8rquAp5H"
+          >
             <button className="px-6 py-4 bg-transparent text-white hover:text-theme hover:bg-white transition duration-500 border-2 border-white font-bold rounded">
               Join Our Discord
             </button>
