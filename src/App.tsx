@@ -16,7 +16,7 @@ import Gallery from "./components/Gallery";
 import Projects from "./components/Projects";
 import NotFound from "./components/404";
 import Contact from "./components/contact";
-import EventRegistration from './components/EventRegistration';
+import EventRegistration from './static/EventRegistration';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
