@@ -19,12 +19,12 @@ const Contact: React.FC = () => {
     event.preventDefault();
 
     try {
-      // Simulating a fetch request, replace with actual API endpoint
-      const response = await fetch("#", {
+
+      const response = await fetch("https://ecast.pythonanywhere.com/api/contact/form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-        }, //  # - change to https://ecast.pythonanywhere.com/api/contact okay 0;)
+        }, 
         body: JSON.stringify({ name, email, message }),
       });
 
