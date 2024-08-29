@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nuu7ve382p");
+  </script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/ecast-logo.png" />
+    <link id="favicon" rel="icon" type="image/svg+xml" href="/ecast-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ECAST | Electronics And Computer Community Amidst Students, Thapathali</title>
+    
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
       (function(l) {
-        if (l.search[1] === '/' ) {
+        if (l.search[1] === '/') {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
+            return s.replace(/~and~/g, '&');
           }).join('?');
           window.history.replaceState(null, null,
               l.pathname.slice(0, -1) + decoded + l.hash
           );
         }
-      }(window.location))
+      }(window.location));
+
+      window.onload = function () {
+        const favicon = document.getElementById('favicon');
+        const pageTitle = document.title;
+        const attentionMessage = 'Explore More';
+
+        document.addEventListener('visibilitychange', function (e) {
+          const isPageActive = !document.hidden;
+          toggle(isPageActive);
+        });
+
+        function toggle(isPageActive) {
+          if (isPageActive) {
+            document.title = pageTitle;
+            favicon.href = './ecast-logo.png';
+          } else {
+            document.title = attentionMessage;
+            favicon.href = 'ecast-logo.png';
+          }
+        }
+      }
+
     </script>
-    <script type="module" crossorigin src="/assets/index-252b3193.js"></script>
+
+
+
+    <script type="module" crossorigin src="/assets/index-c317d617.js"></script>
     <link rel="stylesheet" href="/assets/index-96416768.css">
   </head>
   <body>
