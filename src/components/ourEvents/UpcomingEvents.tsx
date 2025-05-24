@@ -2,14 +2,14 @@
 import "./css/UpcomingEvents.css";
 import Events from "./Events";
 import comingsoon from "./EventsImages/comingsoon.png";
-import event1 from "./EventsImages/event1.jpg";
+
 
 const UpcomingEvents = () => {
   const upcomingEvents = [
     {
-      id: "article-submission",
-      topic: "AI Writing Competition",
-      image: event1,
+      id: "coming-soon",
+      topic: "Coming Soon",
+      image: comingsoon,
     },
     {
       id: "coming-soon",
@@ -17,7 +17,7 @@ const UpcomingEvents = () => {
       image: comingsoon,
     },
     {
-      id: "coming-soon-2",
+      id: "coming-soon",
       topic: "Coming Soon",
       image: comingsoon,
     },

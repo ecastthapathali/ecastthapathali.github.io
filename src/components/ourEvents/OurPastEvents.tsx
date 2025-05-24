@@ -6,14 +6,27 @@ import blockchain from "./EventsImages/blockchain.jpg"
 import art from "./EventsImages/art.jpg"
 import net from "./EventsImages/netbootcamp.jpg"
 import PastEventComp from "./PastEventComp";
+import article from "./EventsImages/event1.jpg"
 
 const OurPastEvents = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center bg-black text-white pt-10">
+  <div className="flex flex-col items-center justify-center bg-black text-white pt-10">
         <p className="text-center font-bold text-xl">OUR PAST EVENTS</p>
         <div className="w-1/2 lg:w-1/4 mx-auto border-t-1 border-b-2 border-red-800 my-4"></div>
       </div>
+      <div className="container1">
+        <div className="container2">
+          <div className="semi-container1">
+            <PastEventComp 
+              image={article} 
+              topic="Article Writing Competition" 
+              loadLink="#"
+              secondButtonLink="#"
+            />
+          </div>
+        </div>
+        </div>
 
       <div className="container1">
         <div className="container2">

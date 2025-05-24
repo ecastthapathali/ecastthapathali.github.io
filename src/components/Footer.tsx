@@ -20,9 +20,6 @@ const Footer = () => {
           <Link to="/about" className="px-6 py-2 m-1 hover:text-crimson">
             About Us
           </Link>
-          <Link to="/FormSub" className="px-6 py-2 m-1 hover:text-crimson">
-            Form
-          </Link>
           <Link to="/committee" className="px-6 py-2 m-1 hover:text-crimson">
             Committee
           </Link>
