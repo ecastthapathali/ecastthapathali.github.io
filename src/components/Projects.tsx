@@ -24,6 +24,7 @@ const projects = [
 const Project  = () => {   
   return (
     <>
+    
       <div className="App text-center p-8 bg-black min-h-screen">
         <div className="flex flex-col items-center justify-center  pt-4">
           <p className="text-center text-white font-bold text-xl">

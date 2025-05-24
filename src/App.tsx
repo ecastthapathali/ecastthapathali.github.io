@@ -16,7 +16,8 @@ import Gallery from "./components/Gallery";
 import Projects from "./components/Projects";
 import NotFound from "./components/404";
 import Contact from "./components/contact";
-import EventRegistration from './components/EventRegistration';
+import EventRegistration from "./components/EventRegistration";
+import Chatbot from "./components/chatBot/chatBot";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +48,7 @@ function App() {
     <>
       <BrowserRouter basename="/">
         <NavBar />
+        <Chatbot />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
