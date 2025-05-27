@@ -1,5 +1,10 @@
 import Logo from "../../public/ecast-logo.png";
-import { FaLinkedin, FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+  FaEnvelope,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,7 +14,11 @@ const Footer = () => {
       <div className="top-footer text-white flex flex-col items-center justify-center pb-1">
         <div className="motto text-center pb-5">
           <a href="./" className="flex  justify-center pb-2 items-center">
-            <img src={Logo} alt="Logo" className="h-14 w-14 justify-center mr-2" />
+            <img
+              src={Logo}
+              alt="Logo"
+              className="h-14 w-14 justify-center mr-2"
+            />
             <h1 className="text-2xl font-bold">ECAST</h1>
           </a>
         </div>
@@ -32,10 +41,12 @@ const Footer = () => {
           <Link to="/contact-us" className="px-6 py-2 m-1 hover:text-crimson">
             Contact us
           </Link>
+          <Link to="/join-us" className="px-6 py-2 m-1 hover:text-crimson">
+            Join Us
+          </Link>
         </div>
       </div>
       <div className="social text-white text-center ">
-
         <div className="social-links flex justify-center  pb-1 mt-2 mb-2">
           <a
             className="instagram text-3xl mx-3"
