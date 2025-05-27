@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <div className="flex justify-center items-center h-full bg-black">
-        <h2 className="text-6xl font-medium text-slate-600 bg-black p-12 sm:flex-row sm:justify-center">
+        <h2 className="text-6xl font-medium text-slate-50 bg-black p-12 sm:flex-row sm:justify-center">
           Contact Us
         </h2>
       </div>
@@ -151,7 +151,7 @@ const Contact: React.FC = () => {
                 autoComplete="off"
               >
                 <div className="flex justify-center items-center pb-2 bg-black">
-                  <h2 className="text-3xl font-medium text-slate-600 bg-black sm:justify-center">
+                  <h2 className="text-3xl font-medium text-slate-50 bg-black sm:justify-center">
                     Contact Form
                   </h2>
                 </div>
@@ -169,7 +169,7 @@ const Contact: React.FC = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
-                    className="w-full py-1 px-2 border-gray-300 bg-gray-300 text-black rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    className="w-full py-1 px-2 border-gray-300 bg-gray-50 text-black rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   />
                 </div>
                 <div className="mb-4">
@@ -186,7 +186,7 @@ const Contact: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full py-1 px-2 border-gray-300 bg-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    className="w-full py-1 px-2 border-gray-300 bg-gray-50 text-black rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   />
                 </div>
                 <div className="mb-6">
@@ -203,7 +203,7 @@ const Contact: React.FC = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     required
                     rows={6} 
-                    className="w-full py-1 px-1 border-gray-300 bg-gray-300 text-black rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    className="w-full py-1 px-1 border-gray-300 bg-gray-50 text-black rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   />
                 </div>
                 <button

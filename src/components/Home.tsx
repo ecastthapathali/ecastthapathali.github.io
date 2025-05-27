@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Background from "../assets/Thapathali.jpg";
 import { TypeAnimation } from "react-type-animation";
 
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -10,12 +11,13 @@ const Home = () => {
   };
 
   return (
+    <>
     <main
       className={`flex h-[100vh] bg-no-repeat bg-cover`}
       style={{ backgroundImage: `url(${Background})` }}
-    >
+      >
       {/* Home Hero Section */}
-      <div className="static p-100 text-white flex flex-col w-full h-full justify-evenly items-center z-10 backdrop-blur-sm backdrop-brightness-50 bg-no-repeat bg-cover">
+      <div className="static p-100 text-white flex flex-col w-full h-full justify-evenly items-center z-10 backdrop-blur-sm backdrop-brightness-75 bg-no-repeat bg-cover">
         <h1 className="text-6xl sm:text-8xl lg:text-9xl animate-texColCha font-extralight tracking-wide">
           ECAST
         </h1>
@@ -54,6 +56,7 @@ const Home = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 
