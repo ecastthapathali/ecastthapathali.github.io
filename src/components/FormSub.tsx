@@ -290,9 +290,9 @@ const SubForm = () => {
                 disabled={isSubmitting || formSubmitted}
               >
                 <option value="">Select Year</option>
-                <option value="2079">2079</option>
-                <option value="2080">2080</option>
-                <option value="2081">2081</option>
+                <option value="79">2079</option>
+                <option value="80">2080</option>
+                <option value="81">2081</option>
               </select>
             </div>
 
@@ -386,20 +386,12 @@ const SubForm = () => {
                 disabled={isSubmitting || formSubmitted}
               >
                 <option value="">Select Post</option>
-                <option value="Technical Team">
-                  Technical Team (Hardware / Software)
-                </option>
-                <option value="Research & Development">
-                  Research & Development
-                </option>
-                <option value="Social Media Manage">
-                  Social Media Manager
-                </option>
-                <option value="Events & Communications">
-                  Events & Communications
-                </option>
-                <option value="Editor in chief">Editor in chief</option>
-                <option value="Graphic Design">Graphic Design</option>
+                <option value="TT">Technical Team (Hardware / Software)</option>
+                <option value="RD">Research & Development</option>
+                <option value="SMM">Social Media Manager</option>
+                <option value="EC">Events & Communications</option>
+                <option value="EIC">Editor in chief</option>
+                <option value="GD">Graphic Design</option>
               </select>
             </div>
 
