@@ -413,7 +413,7 @@ const SubForm = () => {
 
             <div className="mb-4 p-8 bg-black shadow-md shadow-gray-400 rounded-lg w-full max-w-5xl transform transition duration-500 hover:scale-105">
               <label className="block text-white mb-2" htmlFor="interest">
-                Your Skills And Interests *
+                Your Skills And Interests (Mention any other post you would like to join in addition to the primary one in this section) *
               </label>
               <textarea
                 className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-red-500"
