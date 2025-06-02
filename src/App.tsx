@@ -67,7 +67,7 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/register/:eventId" element={<EventRegistration />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/join-us" element={<SubForm />} />
+          {/* <Route path="/join-us" element={<SubForm />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
