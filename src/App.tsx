@@ -18,7 +18,6 @@ import NotFound from "./components/404";
 import Contact from "./components/contact";
 import EventRegistration from "./static/EventRegistration";
 import Chatbot from "./components/chatBot/ChatBot";
-import SubForm from "./components/FormSub";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
