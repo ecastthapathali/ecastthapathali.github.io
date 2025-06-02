@@ -41,9 +41,9 @@ const Footer = () => {
           <Link to="/contact-us" className="px-6 py-2 m-1 hover:text-crimson">
             Contact us
           </Link>
-          <Link to="/join-us" className="px-6 py-2 m-1 hover:text-crimson">
+          {/* <Link to="/join-us" className="px-6 py-2 m-1 hover:text-crimson">
             Join Us
-          </Link>
+            </Link> */}
         </div>
       </div>
       <div className="social text-white text-center ">
