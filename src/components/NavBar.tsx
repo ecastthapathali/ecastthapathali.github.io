@@ -14,15 +14,19 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-slate-900/95 backdrop-filter backdrop-blur-lg shadow-lg flex transition-all duration-300 hover:bg-slate-900/98">
-      <div className="flex w-full items-center justify-between px-4 max-w-7xl mx-auto">
+    <nav className="sticky top-0 left-0 z-50 w-full h-20 bg-slate-900/95 backdrop-filter backdrop-blur-lg shadow-lg flex transition-all justify-between duration-300 hover:bg-slate-900/98">
+      <div className="flex w-full items-center justify-between px-4 max-w-full mx-auto">
         <div className="flex items-center flex-shrink-0">
           <NavLink
             to="/"
             className="flex items-center gap-2 group transition-transform duration-300 hover:scale-105"
             onClick={closeMenu}
           >
-            <img src={Logo} alt="Logo" className="h-14 w-14 transition-transform duration-300 group-hover:rotate-12" />
+            <img
+              src={Logo}
+              alt="Logo"
+              className="h-14 w-14 transition-transform duration-300 group-hover:rotate-12"
+            />
             <span className="text-white text-3xl font-semibold tracking-wider group-hover:text-theme transition-colors duration-300">
               ECAST
             </span>
@@ -122,8 +126,10 @@ const Navlink: React.FC<NavlinkProps> = ({ to, children, onClick }) => {
         const baseClasses =
           "px-3 xl:px-4 py-2 font-bold uppercase tracking-wide transition-all duration-300 text-sm xl:text-base whitespace-nowrap relative group ";
         return isActive
-          ? baseClasses + "text-theme after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-theme after:scale-x-100 after:transition-transform after:duration-300"
-          : baseClasses + "text-white hover:text-theme after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-theme after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300";
+          ? baseClasses +
+              "text-theme after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-theme after:scale-x-100 after:transition-transform after:duration-300"
+          : baseClasses +
+              "text-white hover:text-theme after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-theme after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300";
       }}
       onClick={onClick}
     >

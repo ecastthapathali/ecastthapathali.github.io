@@ -27,6 +27,7 @@ const Contact: React.FC = () => {
     setSubmitStatus("loading");
 
     try {
+      // Main backend API call - this determines success/failure
       const response = await fetch(
         "https://ecast.pythonanywhere.com/api/contact/form/",
         {
@@ -42,8 +43,42 @@ const Contact: React.FC = () => {
         throw new Error("Some technical error contact us");
       }
 
+      // Main backend succeeded - show success to user
       setSubmitStatus("success");
       setFormSubmitted(true);
+
+      // Google Apps Script backup submission with timeout and proper error handling
+      const payload = { name, email, message };
+
+      // Create a promise with timeout for the backup submission
+      const backupSubmission = Promise.race([
+        fetch(
+          "https://script.google.com/macros/s/AKfycbwuirjTqR7GSiZyae1AHYuk-tNnwIsA2NaeKJzxrozvp-Vufo59h6ZTIUC5gR7jkGSh/exec",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+            mode: "no-cors", // This helps with CORS issues on GitHub Pages
+          }
+        ),
+        // Timeout after 5 seconds
+        new Promise((_, reject) =>
+          setTimeout(() => reject(new Error("Backup submission timeout")), 5000)
+        ),
+      ]);
+
+      backupSubmission
+        .then(() => {
+          console.log("Google Apps Script backup submission completed");
+        })
+        .catch((error) => {
+          console.warn(
+            "Google Apps Script backup submission failed (this is okay):",
+            error.message
+          );
+        });
 
       // Reset form after success animation
       setTimeout(() => {
@@ -55,7 +90,7 @@ const Contact: React.FC = () => {
         setFormSubmitted(false);
       }, 3000);
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error submitting form to main backend:", error);
       setSubmitStatus("error");
       setTimeout(() => {
         setIsLoading(false);
@@ -131,13 +166,13 @@ const Contact: React.FC = () => {
               <div className="mobile flex justify-center items-center mt-3">
                 <FaPhoneVolume className="mr-2" />
                 <span>
-                  <a href="tel:+9779824274331">+977 9824274331</a>
+                  <a href="tel:+9779745298983">+977 9745298983 </a>
                 </span>
               </div>
               <div className="mobile flex justify-center items-center mt-3">
                 <FaPhoneVolume className="mr-2" />
                 <span>
-                  <a href="tel:+9779867404111">+977 9867404111</a>
+                  <a href="tel:+9779867216060">+977 9867216060</a>
                 </span>
               </div>
               <div className="email flex justify-center items-center mt-3">
