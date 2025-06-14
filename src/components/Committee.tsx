@@ -15,24 +15,25 @@ const Committee = () => {
   useEffect(() => {
     setTeamMemberList([
       {
-      name: "Suprem Khatri",
-      position: "President",
-      imgSrc: "https://avatars.githubusercontent.com/u/128308240?v=4",
-      linkedin: "https://www.linkedin.com/in/suprem-khatri-96ab3125a/",
-      github: "https://github.com/supremkhatri",
-    },
-    
-    {
-      name: "Abhishek Panthee",
-      position: "Vice President",
-      imgSrc: "https://avatars.githubusercontent.com/u/80570587?v=4",
-      linkedin: "https://www.linkedin.com/in/abhishekpanthee/",
-      github: "https://github.com/abhishekpanthee",
-    },
-    {
+        name: "Suprem Khatri",
+        position: "President",
+        imgSrc: "https://avatars.githubusercontent.com/u/128308240?v=4",
+        linkedin: "https://www.linkedin.com/in/suprem-khatri-96ab3125a/",
+        github: "https://github.com/supremkhatri",
+      },
+
+      {
+        name: "Abhishek Panthee",
+        position: "Vice President",
+        imgSrc: "https://avatars.githubusercontent.com/u/80570587?v=4",
+        linkedin: "https://www.linkedin.com/in/abhishekpanthee/",
+        github: "https://github.com/abhishekpanthee",
+      },
+      {
         name: "Prenisha Upreti",
         position: "General Secretary",
-        imgSrc: "https://shotcan.com/images/2024/07/02/commhr12702a9c0781ff015.jpg",
+        imgSrc:
+          "https://shotcan.com/images/2024/07/02/commhr12702a9c0781ff015.jpg",
         linkedin: "https://www.linkedin.com/in/prenisha-upreti-050553264/",
         github: "https://github.com/prenisha-upreti",
       },
@@ -43,13 +44,13 @@ const Committee = () => {
         linkedin: "https://www.linkedin.com/in/dikshya-khatri-823826279/",
         github: "https://github.com/Dikshyakhatri333",
       },
-    {
-     name: "Dinanath Padhya",
-      position: "Consultant",
-      imgSrc: "https://avatars.githubusercontent.com/u/85153156?v=4",
-      linkedin: "https://linkedin.com/in/whoisdinanath/",
-      github: "https://github.com/whoisdinanath",
-    },
+      {
+        name: "Dinanath Padhya",
+        position: "Consultant",
+        imgSrc: "https://avatars.githubusercontent.com/u/85153156?v=4",
+        linkedin: "https://linkedin.com/in/whoisdinanath/",
+        github: "https://github.com/whoisdinanath",
+      },
       {
         name: "Pratik Pokharel",
         position: "Consultant",
@@ -64,16 +65,16 @@ const Committee = () => {
         linkedin: "https://www.linkedin.com/in/ninamhang-kulung-5a5805279/",
         github: "https://github.com/hang-kulung",
       },
-      
+
       {
         name: "Sanjay Shrestha",
         position: "Research and Development Team",
-        imgSrc: "https://shotcan.com/images/2024/07/02/grds5f990ad29e374355.jpg",
+        imgSrc:
+          "https://shotcan.com/images/2025/06/14/eeaa563e-7dd9-4eca-b860-d82f98bcc9bbf6bc3b91a1e78096.jpg",
         linkedin: "https://www.linkedin.com/in/sanjay-shrestha-58b3b7275/",
-        github: "#",
+        github: "https://github.com/sasudo2",
       },
-      
-      
+
       {
         name: "Ujjwal Dahal",
         position: "Technical Team",
@@ -88,23 +89,23 @@ const Committee = () => {
         linkedin: "https://www.linkedin.com/in/prastut-nepal-24325924a/",
         github: "https://github.com/nepalprastut",
       },
-      
-      
+
       {
         name: "Shristi Mallik",
         position: "Communication, Events and HR",
-        imgSrc: "https://shotcan.com/images/2024/07/02/commhr5468ad6fdbd96eff.th.jpg",
+        imgSrc:
+          "https://shotcan.com/images/2024/07/02/commhr5468ad6fdbd96eff.th.jpg",
         linkedin: "https://www.linkedin.com/in/shristimallik/",
         github: "https://github.com/shmallik111",
       },
       {
         name: "Shaswat Sharma",
         position: "Editor in Chief",
-        imgSrc: "https://shotcan.com/images/2024/07/02/edt1ed2af06f43f4db47.jpg",
+        imgSrc:
+          "https://shotcan.com/images/2024/07/02/edt1ed2af06f43f4db47.jpg",
         linkedin: "https://www.linkedin.com/in/shaswat-sharma-0a6b76313/",
         github: "https://github.com/shaswat-13",
       },
-
     ]);
   }, []);
 
