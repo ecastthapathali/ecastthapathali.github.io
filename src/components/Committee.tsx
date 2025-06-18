@@ -78,8 +78,7 @@ const Committee = () => {
       {
         name: "Purnima Bhandari",
         position: "Research and Development Team",
-        imgSrc:
-          "https://avatars.githubusercontent.com/u/166205776?v=4",
+        imgSrc: "https://avatars.githubusercontent.com/u/166205776?v=4",
         linkedin: "https://www.linkedin.com/in/purnima-bhandari/",
         github: "https://github.com/purnima0122",
       },
@@ -110,44 +109,10 @@ const Committee = () => {
       {
         name: "Bipul Ratna Shakya",
         position: "Technical Team",
-        imgSrc: "",
+        imgSrc: "https://avatars.githubusercontent.com/u/192164303?v=4",
         linkedin: "https://www.linkedin.com/in/bipul-ratna-shakya-baa978318/",
         github: "https://github.com/shakyabeepwool",
       },
-
-      {
-        name: "Shristi Mallik",
-        position: "Communication, Events and HR",
-        imgSrc:"https://shotcan.com/images/2024/07/02/commhr5468ad6fdbd96eff.th.jpg",
-        linkedin: "https://www.linkedin.com/in/shristimallik/",
-        github: "https://github.com/shmallik111",
-      },
-
-      {
-        name: "Prajwal Khanal",
-        position: "Communication, Events and HR",
-        imgSrc:"https://avatars.githubusercontent.com/u/159675938?v=4",
-        linkedin: "https://www.linkedin.com/in/connect-with-prajwal-khanal/",
-        github: "https://github.com/connect-Prajwal-khanal",
-      },
-
-      {
-        name: "Amrit Tamang",
-        position: "Graphics Designer",
-        imgSrc:"https://avatars.githubusercontent.com/u/162800546?v=4",
-        linkedin: "https://www.linkedin.com/in/tamang-amrit/",
-        github: "https://github.com/AmritCodes-7",
-      },
-
-      {
-        name: "Ayushma Devkota",
-        position: "Graphics Designer",
-        imgSrc:
-          "",
-        linkedin: "",
-        github: "",
-      },
-      
       {
         name: "Shaswat Sharma",
         position: "Editor in Chief",
@@ -156,14 +121,43 @@ const Committee = () => {
         linkedin: "https://www.linkedin.com/in/shaswat-sharma-0a6b76313/",
         github: "https://github.com/shaswat-13",
       },
+      {
+        name: "Shristi Mallik",
+        position: "Communication, Events and HR",
+        imgSrc:
+          "https://shotcan.com/images/2024/07/02/commhr5468ad6fdbd96eff.th.jpg",
+        linkedin: "https://www.linkedin.com/in/shristimallik/",
+        github: "https://github.com/shmallik111",
+      },
+      {
+        name: "Prajwal Khanal",
+        position: "Communication, Events and HR",
+        imgSrc: "https://avatars.githubusercontent.com/u/159675938?v=4",
+        linkedin: "https://www.linkedin.com/in/connect-with-prajwal-khanal/",
+        github: "https://github.com/connect-Prajwal-khanal",
+      },
 
+      {
+        name: "Amrit Tamang",
+        position: "Graphics Designer",
+        imgSrc: "https://avatars.githubusercontent.com/u/162800546?v=4",
+        linkedin: "https://www.linkedin.com/in/tamang-amrit/",
+        github: "https://github.com/AmritCodes-7",
+      },
+
+      {
+        name: "Ayushma Devkota",
+        position: "Graphics Designer",
+        imgSrc: "https://avatars.githubusercontent.com/u/187758906?v=4",
+        linkedin: "",
+        github: "https://github.com/9lixir",
+      },
       {
         name: "Agrima Shahi",
         position: "Social Media Manager",
-        imgSrc:
-          "",
+        imgSrc: "https://avatars.githubusercontent.com/u/165810136?v=4",
         linkedin: "https://www.linkedin.com/in/agrima-shahi-990896369/",
-        github: "",
+        github: "https://github.com/agrimashahi",
       },
     ]);
   }, []);
