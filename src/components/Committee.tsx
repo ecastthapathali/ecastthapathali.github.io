@@ -76,6 +76,15 @@ const Committee = () => {
       },
 
       {
+        name: "Purnima Bhandari",
+        position: "Research and Development Team",
+        imgSrc:
+          "https://avatars.githubusercontent.com/u/166205776?v=4",
+        linkedin: "https://www.linkedin.com/in/purnima-bhandari/",
+        github: "https://github.com/purnima0122",
+      },
+
+      {
         name: "Ujjwal Dahal",
         position: "Technical Team",
         imgSrc: "https://avatars.githubusercontent.com/u/122596469?v=4",
@@ -91,13 +100,54 @@ const Committee = () => {
       },
 
       {
+        name: "Abinash Yadav",
+        position: "Technical Team",
+        imgSrc: "https://avatars.githubusercontent.com/u/52949024?v=4",
+        linkedin: "https://www.linkedin.com/in/abinash-yadav-0b622936a/",
+        github: "https://github.com/Avinash1286",
+      },
+
+      {
+        name: "Bipul Ratna Shakya",
+        position: "Technical Team",
+        imgSrc: "",
+        linkedin: "https://www.linkedin.com/in/bipul-ratna-shakya-baa978318/",
+        github: "https://github.com/shakyabeepwool",
+      },
+
+      {
         name: "Shristi Mallik",
         position: "Communication, Events and HR",
-        imgSrc:
-          "https://shotcan.com/images/2024/07/02/commhr5468ad6fdbd96eff.th.jpg",
+        imgSrc:"https://shotcan.com/images/2024/07/02/commhr5468ad6fdbd96eff.th.jpg",
         linkedin: "https://www.linkedin.com/in/shristimallik/",
         github: "https://github.com/shmallik111",
       },
+
+      {
+        name: "Prajwal Khanal",
+        position: "Communication, Events and HR",
+        imgSrc:"https://avatars.githubusercontent.com/u/159675938?v=4",
+        linkedin: "https://www.linkedin.com/in/connect-with-prajwal-khanal/",
+        github: "https://github.com/connect-Prajwal-khanal",
+      },
+
+      {
+        name: "Amrit Tamang",
+        position: "Graphics Designer",
+        imgSrc:"https://avatars.githubusercontent.com/u/162800546?v=4",
+        linkedin: "https://www.linkedin.com/in/tamang-amrit/",
+        github: "https://github.com/AmritCodes-7",
+      },
+
+      {
+        name: "Ayushma Devkota",
+        position: "Graphics Designer",
+        imgSrc:
+          "",
+        linkedin: "",
+        github: "",
+      },
+      
       {
         name: "Shaswat Sharma",
         position: "Editor in Chief",
@@ -105,6 +155,15 @@ const Committee = () => {
           "https://shotcan.com/images/2024/07/02/edt1ed2af06f43f4db47.jpg",
         linkedin: "https://www.linkedin.com/in/shaswat-sharma-0a6b76313/",
         github: "https://github.com/shaswat-13",
+      },
+
+      {
+        name: "Agrima Shahi",
+        position: "Social Media Manager",
+        imgSrc:
+          "",
+        linkedin: "https://www.linkedin.com/in/agrima-shahi-990896369/",
+        github: "",
       },
     ]);
   }, []);

@@ -22,22 +22,23 @@ const Card: React.FC<CardProps> = ({ imgSrc, name, pos, linkedin, github }) => {
       <h1 className="text-3xl my-4 text-theme font-bold tracking-wide group-hover:scale-105 transition-transform duration-300">{name}</h1>
       <h1 className="text-xl my-4 text-white/90 group-hover:text-white transition-colors duration-300">{pos}</h1>
       <div className="flex justify-center space-x-6">
-        <a 
+        {linkedin!="" &&(<a 
           href={linkedin} 
           target="_blank" 
           rel="noopener noreferrer"
           className="transform hover:scale-110 transition-transform duration-300"
         >
           <FaLinkedin className="text-white hover:text-theme transition-colors duration-300" size={28} />
-        </a>
-        <a 
+        </a>)}
+
+        {github!="" &&(<a 
           href={github} 
           target="_blank" 
           rel="noopener noreferrer"
           className="transform hover:scale-110 transition-transform duration-300"
         >
           <FaGithub className="text-white hover:text-theme transition-colors duration-300" size={28} />
-        </a>
+        </a>)}
       </div>
     </div>
   );
