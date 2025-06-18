@@ -18,6 +18,7 @@ import NotFound from "./components/404";
 import Contact from "./components/contact";
 import EventRegistration from "./static/EventRegistration";
 import Chatbot from "./components/chatBot/ChatBot";
+import Alumni from "./components/Alumni";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -63,6 +64,7 @@ function App() {
           <Route path="/pastevents" element={<OurPastEvents />} />
           <Route path="/ourevents" element={<WholeEvents />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/alumni" element={<Alumni/>}/>
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/register/:eventId" element={<EventRegistration />} />
           <Route path="*" element={<NotFound />} />

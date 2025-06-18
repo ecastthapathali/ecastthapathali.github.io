@@ -46,8 +46,14 @@ const NavBar: React.FC = () => {
           <Navlink to="/projects" onClick={closeMenu}>
             Projects
           </Navlink>
+          <Navlink to="/research" onClick={closeMenu}>
+            Research
+          </Navlink>
           <Navlink to="/gallery" onClick={closeMenu}>
             Gallery
+          </Navlink>
+          <Navlink to="/alumni" onClick={closeMenu}>
+            Alumni 
           </Navlink>
           <Navlink to="/contact-us" onClick={closeMenu}>
             Contact
@@ -95,8 +101,14 @@ const NavBar: React.FC = () => {
           <Navlink to="/projects" onClick={closeMenu}>
             Projects
           </Navlink>
+          <Navlink to="/research" onClick={closeMenu}>
+            Research
+          </Navlink>
           <Navlink to="/gallery" onClick={closeMenu}>
             Gallery
+          </Navlink>
+          <Navlink to="/alumni" onClick={closeMenu}>
+            Alumni 
           </Navlink>
           <Navlink to="/contact-us" onClick={closeMenu}>
             Contact Us
