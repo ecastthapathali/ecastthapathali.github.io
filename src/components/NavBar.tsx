@@ -52,9 +52,7 @@ const NavBar: React.FC = () => {
           <Navlink to="/gallery" onClick={closeMenu}>
             Gallery
           </Navlink>
-          <Navlink to="/alumni" onClick={closeMenu}>
-            Alumni 
-          </Navlink>
+         
           <Navlink to="/contact-us" onClick={closeMenu}>
             Contact
           </Navlink>
@@ -107,9 +105,7 @@ const NavBar: React.FC = () => {
           <Navlink to="/gallery" onClick={closeMenu}>
             Gallery
           </Navlink>
-          <Navlink to="/alumni" onClick={closeMenu}>
-            Alumni 
-          </Navlink>
+          
           <Navlink to="/contact-us" onClick={closeMenu}>
             Contact Us
           </Navlink>
