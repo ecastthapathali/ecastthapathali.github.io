@@ -15,6 +15,7 @@ const OurPastEvents = () => {
         <p className="text-center font-bold text-xl">OUR PAST EVENTS</p>
         <div className="w-1/2 lg:w-1/4 mx-auto border-t-1 border-b-2 border-red-800 my-4"></div>
       </div>
+
       <div className="container1">
         <div className="container2">
           <div className="semi-container1">
@@ -22,14 +23,9 @@ const OurPastEvents = () => {
               image={article} 
               topic="Article Writing Competition" 
               loadLink="#"
-              secondButtonLink="#"
             />
           </div>
-        </div>
-        </div>
 
-      <div className="container1">
-        <div className="container2">
           <div className="semi-container1">
             <PastEventComp 
               image={firstcommit} 
@@ -51,9 +47,9 @@ const OurPastEvents = () => {
               loadLink="https://www.facebook.com/photo.php?fbid=254634513879417&set=pb.100079986095247.-2207520000&type=3"
             />
           </div>
-        </div>
+       
 
-        <div className="container2">
+
           <div className="semi-container1">
             <PastEventComp 
               image={net} 

@@ -10,7 +10,7 @@ import Workshop from "./components/aboutComponents/Workshop";
 import Innovation from "./components/aboutComponents/Innovation";
 import Research from "./components/aboutComponents/Research";
 import OurPastEvents from "./components/ourEvents/OurPastEvents";
-import UpcomingEvents from "./components/ourEvents/UpcomingEvents";
+import OnGoingEvents from "./components/ourEvents/OnGoingEvents";
 import WholeEvents from "./components/ourEvents/WholeEvents";
 import Gallery from "./components/Gallery";
 import Projects from "./components/Projects";
@@ -60,7 +60,7 @@ function App() {
           <Route path="/workshop" element={<Workshop />} />
           <Route path="/innovation" element={<Innovation />} />
           <Route path="/research" element={<Research />} />
-          <Route path="/upcomingevents" element={<UpcomingEvents />} />
+          <Route path="/ongoingevents" element={<OnGoingEvents />} />
           <Route path="/pastevents" element={<OurPastEvents />} />
           <Route path="/ourevents" element={<WholeEvents />} />
           <Route path="/projects" element={<Projects />} />
