@@ -1,22 +1,20 @@
 import React from 'react';
 import "./css/Events.css";
-import { Link } from 'react-router-dom';
 
 interface IPROPS {
   image: string;
   topic: string;
-  eventId: string;
 }
 
-const Events: React.FC<IPROPS> = ({ image, topic, eventId }) => {
-  const getReadMoreLink = (eventId: string): string => {
-    const links: Record<string, string> = {
-      'coming-soon': '#', 
-      'coming-soon-2': '#',
-      // Add more event IDs and their corresponding links here
-    };
-    return links[eventId] || '#'; 
-  };
+const Events: React.FC<IPROPS> = ({ image, topic }) => {
+  // const getReadMoreLink = (eventId: string): string => {
+  //   const links: Record<string, string> = {
+  //     'coming-soon': '#', 
+  //     'coming-soon-2': '#',
+  //     // Add more event IDs and their corresponding links here
+  //   };
+  //   return links[eventId] || '#'; 
+  // };
 
   return (
     <div className="image-container">
