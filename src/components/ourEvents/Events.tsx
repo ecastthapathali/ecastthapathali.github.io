@@ -4,9 +4,10 @@ import "./css/Events.css";
 interface IPROPS {
   image: string;
   topic: string;
+  eventId: string;
 }
 
-const Events: React.FC<IPROPS> = ({ image, topic }) => {
+const Events: React.FC<IPROPS> = ({ image, topic, eventId }) => {
   // const getReadMoreLink = (eventId: string): string => {
   //   const links: Record<string, string> = {
   //     'coming-soon': '#', 
@@ -15,6 +16,7 @@ const Events: React.FC<IPROPS> = ({ image, topic }) => {
   //   };
   //   return links[eventId] || '#'; 
   // };
+  const _ = eventId;
 
   return (
     <div className="image-container">
