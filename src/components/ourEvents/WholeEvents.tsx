@@ -1,11 +1,11 @@
 import "./css/UpcomingEvents.css";
 import OurPastEvents from "./OurPastEvents";
-import UpcomingEvents from "./UpcomingEvents";
+import OnGoingEvents from "./OnGoingEvents";
 
 const WholeEvents = () => {
   return (
     <div className="bg-black flex flex-col items-center">
-      <UpcomingEvents />
+      <OnGoingEvents />
       <OurPastEvents />
     </div>
   );
