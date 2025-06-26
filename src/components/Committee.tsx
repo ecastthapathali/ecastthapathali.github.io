@@ -138,9 +138,9 @@ const Committee = () => {
       },
       
       {
-        name: "Shobhiyat Chapagain",
+        name: "Shoviyat Chapagain",
         position: "Graphics Designer",
-        imgSrc: "https://scontent.fktm20-1.fna.fbcdn.net/v/t39.30808-6/277535968_100818079268931_3521043916863251754_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEi96M9QXry-srL9jaDMyMrszoMB_3lz3ezOgwH_eXPd_UK0oLtXQ4Op9y462kD9TIzGImwTrEhiJKpBeZho8uS&_nc_ohc=XwV-HU5jbbwQ7kNvwGXMX3f&_nc_oc=Adlu_kBHd-5M1Y4fpZZP_Z8h7uKsaBilZ47JMZjf4105Cv7OXLVU47v5fm30_B7sQBE&_nc_zt=23&_nc_ht=scontent.fktm20-1.fna&_nc_gid=k05mpb2JtlRty65jcqvkBg&oh=00_AfMmJGuaw82t6FG_jn0FiatV7nrtZCRNsgvGyVbaCboppw&oe=685A1887",
+        imgSrc: "https://avatars.githubusercontent.com/u/170164247?v=4",
         linkedin: "",
         github: "https://github.com/Shovi-c",
       },
