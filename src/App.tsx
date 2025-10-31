@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Committee from "./components/Committee";
 import Footer from "./components/Footer";
-import whatisEcast from "./components/aboutComponents/WhatisECAST";
+import WhatIsEcast from "./components/aboutComponents/WhatisECAST";
 import Workshop from "./components/aboutComponents/Workshop";
 import Innovation from "./components/aboutComponents/Innovation";
 import Research from "./components/aboutComponents/Research";
@@ -38,7 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/committee" element={<Committee />} />
-          <Route path="/whatisecast" Component={whatisEcast} />
+          <Route path="/whatisecast" element={<WhatIsEcast />} />
           <Route path="/workshop" element={<Workshop />} />
           <Route path="/innovation" element={<Innovation />} />
           <Route path="/research" element={<Research />} />
